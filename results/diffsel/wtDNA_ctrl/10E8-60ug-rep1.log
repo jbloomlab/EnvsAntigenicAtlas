@@ -1,0 +1,72 @@
+2018-08-30 15:48:50,564 - INFO - Beginning execution of dms2_diffsel in directory /fh/fast/bloom_j/computational_notebooks/adingens/2017/EnvsAntigenicAtlas
+
+2018-08-30 15:48:50,564 - INFO - Progress is being logged to ./results/diffsel/wtDNA_ctrl/10E8-60ug-rep1.log
+2018-08-30 15:49:01,924 - INFO - Version information:
+	Time and date: Thu Aug 30 15:48:50 2018
+	Platform: Linux-3.13.0-143-generic-x86_64-with-debian-jessie-sid
+	Python version: 3.6.5 |Anaconda, Inc.| (default, Apr 29 2018, 16:14:56)  [GCC 7.2.0]
+	dms_tools2 version: 2.2.8
+	Bio version: 1.72
+	HTSeq version: 0.10.0
+	pandas version: 0.23.3
+	numpy version: 1.15.0
+	IPython version: 6.4.0
+	jupyter version: 1.0.0
+	matplotlib version: 2.2.2
+	plotnine version: 0.3.0
+	natsort version: 5.3.3
+	pystan version: 2.16.0.0
+	scipy version: 1.1.0
+	seaborn version: 0.9.0
+	phydmslib version: 2.3.1
+	statsmodels version: 0.9.0
+	rpy2 version: 2.9.1
+
+2018-08-30 15:49:01,924 - INFO - Parsed the following arguments:
+	outdir = ./results/diffsel/wtDNA_ctrl
+	ncpus = 1
+	use_existing = yes
+	indir = ./results/renumberedcounts
+	chartype = codon_to_aa
+	excludestop = yes
+	pseudocount = 5.0
+	mincount = 0
+	name = 10E8-60ug-rep1
+	sel = mut-virus-rep1-10E8-60ug
+	mock = mut-virus-rep1
+	err = wt-DNA-rep1
+
+2018-08-30 15:49:01,927 - INFO - Reading selected sample counts from mut-virus-rep1-10E8-60ug
+2018-08-30 15:49:01,973 - INFO - Reading mock-selected sample counts from mut-virus-rep1
+2018-08-30 15:49:01,989 - INFO - Reading error-control sample counts from wt-DNA-rep1
+2018-08-30 15:49:02,003 - INFO - Computing mutdiffsel...
+2018-08-30 15:49:09,183 - INFO - Mutations with largest mutdiffsel:
+site wildtype mutation  mutdiffsel
+683        K        Y        6.54
+671        N        T        6.30
+671        N        L        6.15
+672        W        V        5.54
+671        N        F        5.39
+ 35        W        S        5.26
+671        N        R        5.26
+672        W        G        5.25
+673        F        R        5.17
+379        G        Q        5.08
+
+2018-08-30 15:49:09,183 - INFO - Writing to ./results/diffsel/wtDNA_ctrl/10E8-60ug-rep1_mutdiffsel.csv
+2018-08-30 15:49:09,222 - INFO - Computing sitediffsel...
+2018-08-30 15:49:09,244 - INFO - Sites with largest absolute sitediffsel:
+site  abs_diffsel  positive_diffsel  negative_diffsel  max_diffsel  min_diffsel
+671        55.58             53.77             -1.81         6.30        -1.14
+ 33        46.32              5.41            -40.91         2.88        -3.80
+432        45.08              5.35            -39.74         2.75        -5.05
+ 49        45.04              4.69            -40.34         2.32        -3.78
+ 77        44.86              2.77            -42.09         2.69        -3.88
+613        44.27              2.60            -41.67         2.01        -4.03
+ 32        43.95              4.09            -39.86         3.19        -3.78
+ 31        42.86              2.62            -40.24         2.62        -4.13
+409        42.69              6.19            -36.50         3.27        -4.09
+430        42.61              8.34            -34.27         3.75        -3.74
+
+2018-08-30 15:49:09,245 - INFO - Writing to ./results/diffsel/wtDNA_ctrl/10E8-60ug-rep1_sitediffsel.csv
+2018-08-30 15:49:09,254 - INFO - Successful completion of dms2_diffsel

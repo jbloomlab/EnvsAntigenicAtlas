@@ -1,0 +1,121 @@
+2018-08-23 10:46:57,349 - INFO - Beginning execution of dms2_bcsubamp in directory /fh/fast/bloom_j/computational_notebooks/adingens/2017/EnvsAntigenicAtlas
+
+2018-08-23 10:46:57,349 - INFO - Progress is being logged to ./results/codoncounts/mut-virus-rep1-VRC34-33ug.log
+2018-08-23 10:47:04,750 - INFO - Version information:
+	Time and date: Thu Aug 23 10:46:57 2018
+	Platform: Linux-3.13.0-143-generic-x86_64-with-debian-jessie-sid
+	Python version: 3.6.5 |Anaconda, Inc.| (default, Apr 29 2018, 16:14:56)  [GCC 7.2.0]
+	dms_tools2 version: 2.2.8
+	Bio version: 1.72
+	HTSeq version: 0.10.0
+	pandas version: 0.23.3
+	numpy version: 1.15.0
+	IPython version: 6.4.0
+	jupyter version: 1.0.0
+	matplotlib version: 2.2.2
+	plotnine version: 0.3.0
+	natsort version: 5.3.3
+	pystan version: 2.16.0.0
+	scipy version: 1.1.0
+	seaborn version: 0.9.0
+	phydmslib version: 2.3.1
+	statsmodels version: 0.9.0
+	rpy2 version: 2.9.1
+
+2018-08-23 10:47:04,752 - INFO - Parsed the following arguments:
+	outdir = ./results/codoncounts
+	ncpus = -1
+	use_existing = yes
+	refseq = ./data/BG505.W6.C2.T332N_env.fasta
+	alignspecs = ['87,375,39,36', '376,666,36,39', '663,954,33,41', '955,1228,33,37', '1228,1527,34,35', '1527,1815,32,39', '1816,2098,36,41']
+	bclen = 8
+	fastqdir = ./results/FASTQ_files/
+	R2 = None
+	R1trim = [200]
+	R2trim = [170]
+	bclen2 = None
+	chartype = codon
+	maxmuts = 4
+	minq = 15
+	minreads = 2
+	minfraccall = 0.95
+	minconcur = 0.75
+	sitemask = None
+	purgeread = 0
+	purgebc = 0
+	bcinfo = False
+	name = mut-virus-rep1-VRC34-33ug
+	R1 = ['BG505_mut-virus-rep1-VRC34-33ug_R1.fastq.gz']
+
+2018-08-23 10:47:04,808 - INFO - Read refseq of 2583 codons from ./data/BG505.W6.C2.T332N_env.fasta
+2018-08-23 10:47:04,812 - INFO - Reads are in these FASTQ pairs:
+	./results/FASTQ_files/BG505_mut-virus-rep1-VRC34-33ug_R1.fastq.gz and ./results/FASTQ_files/BG505_mut-virus-rep1-VRC34-33ug_R2.fastq.gz
+
+2018-08-23 10:47:04,812 - INFO - Now parsing read pairs...
+2018-08-23 10:47:16,736 - INFO - Reads parsed so far: 500000
+2018-08-23 10:47:27,922 - INFO - Reads parsed so far: 1000000
+2018-08-23 10:47:38,881 - INFO - Reads parsed so far: 1500000
+2018-08-23 10:47:49,955 - INFO - Reads parsed so far: 2000000
+2018-08-23 10:48:01,259 - INFO - Reads parsed so far: 2500000
+2018-08-23 10:48:11,713 - INFO - Reads parsed so far: 3000000
+2018-08-23 10:48:22,198 - INFO - Reads parsed so far: 3500000
+2018-08-23 10:48:33,743 - INFO - Reads parsed so far: 4000000
+2018-08-23 10:48:44,215 - INFO - Reads parsed so far: 4500000
+2018-08-23 10:48:54,729 - INFO - Reads parsed so far: 5000000
+2018-08-23 10:49:05,457 - INFO - Reads parsed so far: 5500000
+2018-08-23 10:49:15,916 - INFO - Reads parsed so far: 6000000
+2018-08-23 10:49:28,346 - INFO - Reads parsed so far: 6500000
+2018-08-23 10:49:38,624 - INFO - Reads parsed so far: 7000000
+2018-08-23 10:49:48,486 - INFO - Parsed 7478868 reads, found 2667422 unique barcodes.
+2018-08-23 10:49:48,490 - INFO - Summary stats on reads:
+total  fail filter  low Q barcode
+7478868            0         638506
+2018-08-23 10:49:48,490 - INFO - Writing these stats to ./results/codoncounts/mut-virus-rep1-VRC34-33ug_readstats.csv
+
+2018-08-23 10:49:49,311 - INFO - Number of reads per barcode:
+                 number of barcodes
+number of reads                    
+1                            960735
+2                            559154
+3                            471693
+4                            322369
+5                            185907
+6                             94481
+7                             43281
+8                             18136
+9                              7181
+10                             2803
+11                             1026
+12                              391
+13                              154
+14                               59
+15                               28
+16                               16
+17                                4
+18                                2
+19                                1
+24                                1
+2018-08-23 10:49:49,311 - INFO - Writing these stats to ./results/codoncounts/mut-virus-rep1-VRC34-33ug_readsperbc.csv
+
+2018-08-23 10:49:49,317 - INFO - Examining the 2667422 barcodes to build and align subamplicons...
+2018-08-23 10:50:00,708 - INFO - Barcodes examined so far: 200000
+2018-08-23 10:50:11,879 - INFO - Barcodes examined so far: 400000
+2018-08-23 10:50:22,541 - INFO - Barcodes examined so far: 600000
+2018-08-23 10:50:32,583 - INFO - Barcodes examined so far: 800000
+2018-08-23 10:50:42,264 - INFO - Barcodes examined so far: 1000000
+2018-08-23 10:50:51,079 - INFO - Barcodes examined so far: 1200000
+2018-08-23 10:50:59,215 - INFO - Barcodes examined so far: 1400000
+2018-08-23 10:51:06,385 - INFO - Barcodes examined so far: 1600000
+2018-08-23 10:51:11,929 - INFO - Barcodes examined so far: 1800000
+2018-08-23 10:51:15,672 - INFO - Barcodes examined so far: 2000000
+2018-08-23 10:51:18,900 - INFO - Barcodes examined so far: 2200000
+2018-08-23 10:51:29,134 - INFO - Barcodes examined so far: 2400000
+2018-08-23 10:51:36,701 - INFO - Barcodes examined so far: 2600000
+2018-08-23 10:51:37,585 - INFO - Examined all barcodes. Summary stats:
+total  too few reads  not alignable  aligned
+2667422         960735         209015  1497672
+2018-08-23 10:51:37,585 - INFO - Writing these stats to ./results/codoncounts/mut-virus-rep1-VRC34-33ug_bcstats.csv
+
+2018-08-23 10:51:37,607 - INFO - Writing the counts of each codon identity at each site to ./results/codoncounts/mut-virus-rep1-VRC34-33ug_codoncounts.csv
+
+2018-08-23 10:51:37,655 - INFO - Successful completion of dms2_bcsubamp

@@ -1,0 +1,8 @@
+.*
+*.pyc
+!.gitignore
+*.fasta
+!data/*.fasta
+*.sbatch
+FASTQ_files
+slurm*

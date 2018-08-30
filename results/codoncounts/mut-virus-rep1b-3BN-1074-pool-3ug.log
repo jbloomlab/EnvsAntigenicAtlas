@@ -1,0 +1,214 @@
+2018-08-23 11:01:23,843 - INFO - Beginning execution of dms2_bcsubamp in directory /fh/fast/bloom_j/computational_notebooks/adingens/2017/EnvsAntigenicAtlas
+
+2018-08-23 11:01:23,843 - INFO - Progress is being logged to ./results/codoncounts/mut-virus-rep1b-3BN-1074-pool-3ug.log
+2018-08-23 11:01:26,929 - INFO - Version information:
+	Time and date: Thu Aug 23 11:01:23 2018
+	Platform: Linux-3.13.0-143-generic-x86_64-with-debian-jessie-sid
+	Python version: 3.6.5 |Anaconda, Inc.| (default, Apr 29 2018, 16:14:56)  [GCC 7.2.0]
+	dms_tools2 version: 2.2.8
+	Bio version: 1.72
+	HTSeq version: 0.10.0
+	pandas version: 0.23.3
+	numpy version: 1.15.0
+	IPython version: 6.4.0
+	jupyter version: 1.0.0
+	matplotlib version: 2.2.2
+	plotnine version: 0.3.0
+	natsort version: 5.3.3
+	pystan version: 2.16.0.0
+	scipy version: 1.1.0
+	seaborn version: 0.9.0
+	phydmslib version: 2.3.1
+	statsmodels version: 0.9.0
+	rpy2 version: 2.9.1
+
+2018-08-23 11:01:26,930 - INFO - Parsed the following arguments:
+	outdir = ./results/codoncounts
+	ncpus = -1
+	use_existing = yes
+	refseq = ./data/BG505.W6.C2.T332N_env.fasta
+	alignspecs = ['87,375,39,36', '376,666,36,39', '663,954,33,41', '955,1228,33,37', '1228,1527,34,35', '1527,1815,32,39', '1816,2098,36,41']
+	bclen = 8
+	fastqdir = ./results/FASTQ_files/
+	R2 = None
+	R1trim = [200]
+	R2trim = [170]
+	bclen2 = None
+	chartype = codon
+	maxmuts = 4
+	minq = 15
+	minreads = 2
+	minfraccall = 0.95
+	minconcur = 0.75
+	sitemask = None
+	purgeread = 0
+	purgebc = 0
+	bcinfo = False
+	name = mut-virus-rep1b-3BN-1074-pool-3ug
+	R1 = ['BG505_mut-virus-rep1b-3BN-1074-pool-3ug_R1.fastq.gz']
+
+2018-08-23 11:01:26,967 - INFO - Read refseq of 2583 codons from ./data/BG505.W6.C2.T332N_env.fasta
+2018-08-23 11:01:26,968 - INFO - Reads are in these FASTQ pairs:
+	./results/FASTQ_files/BG505_mut-virus-rep1b-3BN-1074-pool-3ug_R1.fastq.gz and ./results/FASTQ_files/BG505_mut-virus-rep1b-3BN-1074-pool-3ug_R2.fastq.gz
+
+2018-08-23 11:01:26,968 - INFO - Now parsing read pairs...
+2018-08-23 11:01:37,885 - INFO - Reads parsed so far: 500000
+2018-08-23 11:01:48,391 - INFO - Reads parsed so far: 1000000
+2018-08-23 11:01:58,976 - INFO - Reads parsed so far: 1500000
+2018-08-23 11:02:09,551 - INFO - Reads parsed so far: 2000000
+2018-08-23 11:02:20,112 - INFO - Reads parsed so far: 2500000
+2018-08-23 11:02:30,646 - INFO - Reads parsed so far: 3000000
+2018-08-23 11:02:41,628 - INFO - Reads parsed so far: 3500000
+2018-08-23 11:02:52,077 - INFO - Reads parsed so far: 4000000
+2018-08-23 11:03:02,558 - INFO - Reads parsed so far: 4500000
+2018-08-23 11:03:12,987 - INFO - Reads parsed so far: 5000000
+2018-08-23 11:03:23,399 - INFO - Reads parsed so far: 5500000
+2018-08-23 11:03:33,878 - INFO - Reads parsed so far: 6000000
+2018-08-23 11:03:44,230 - INFO - Reads parsed so far: 6500000
+2018-08-23 11:03:45,800 - INFO - Parsed 6572201 reads, found 214394 unique barcodes.
+2018-08-23 11:03:45,805 - INFO - Summary stats on reads:
+total  fail filter  low Q barcode
+6572201            0         728722
+2018-08-23 11:03:45,805 - INFO - Writing these stats to ./results/codoncounts/mut-virus-rep1b-3BN-1074-pool-3ug_readstats.csv
+
+2018-08-23 11:03:45,900 - INFO - Number of reads per barcode:
+                 number of barcodes
+number of reads                    
+1                             68070
+2                              1817
+3                               734
+4                               551
+5                               515
+6                               493
+7                               498
+8                               444
+9                               465
+10                              493
+11                              522
+12                              587
+13                              635
+14                              624
+15                              715
+16                              755
+17                              837
+18                              950
+19                             1069
+20                             1122
+21                             1257
+22                             1342
+23                             1426
+24                             1582
+25                             1705
+26                             1897
+27                             1984
+28                             2215
+29                             2353
+30                             2653
+31                             2873
+32                             3135
+33                             3434
+34                             3711
+35                             4052
+36                             4162
+37                             4428
+38                             4686
+39                             4776
+40                             4903
+41                             4930
+42                             5106
+43                             5047
+44                             4952
+45                             4901
+46                             4740
+47                             4546
+48                             4391
+49                             4150
+50                             3732
+51                             3430
+52                             3139
+53                             2891
+54                             2570
+55                             2271
+56                             2008
+57                             1683
+58                             1435
+59                             1254
+60                              963
+61                              828
+62                              671
+63                              601
+64                              469
+65                              399
+66                              300
+67                              254
+68                              195
+69                              165
+70                              142
+71                              113
+72                               84
+73                               81
+74                               68
+75                               58
+76                               62
+77                               54
+78                               56
+79                               52
+80                               60
+81                               57
+82                               46
+83                               48
+84                               45
+85                               42
+86                               54
+87                               50
+88                               54
+89                               41
+90                               42
+91                               37
+92                               38
+93                               42
+94                               41
+95                               34
+96                               48
+97                               27
+98                               32
+99                               30
+100                              27
+101                              25
+102                              28
+103                              23
+104                              22
+105                              18
+106                              10
+107                              15
+108                              10
+109                              12
+110                              11
+111                               5
+112                              12
+113                              10
+114                               4
+115                               5
+116                               2
+117                               5
+118                               4
+119                               2
+120                               4
+121                               3
+123                               2
+126                               2
+127                               2
+129                               1
+131                               1
+2018-08-23 11:03:45,900 - INFO - Writing these stats to ./results/codoncounts/mut-virus-rep1b-3BN-1074-pool-3ug_readsperbc.csv
+
+2018-08-23 11:03:45,908 - INFO - Examining the 214394 barcodes to build and align subamplicons...
+2018-08-23 11:04:06,860 - INFO - Barcodes examined so far: 200000
+2018-08-23 11:04:06,874 - INFO - Examined all barcodes. Summary stats:
+total  too few reads  not alignable  aligned
+214394          68070          10093   136231
+2018-08-23 11:04:06,874 - INFO - Writing these stats to ./results/codoncounts/mut-virus-rep1b-3BN-1074-pool-3ug_bcstats.csv
+
+2018-08-23 11:04:06,896 - INFO - Writing the counts of each codon identity at each site to ./results/codoncounts/mut-virus-rep1b-3BN-1074-pool-3ug_codoncounts.csv
+
+2018-08-23 11:04:06,946 - INFO - Successful completion of dms2_bcsubamp

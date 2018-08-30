@@ -1,0 +1,176 @@
+2018-08-23 10:50:37,373 - INFO - Beginning execution of dms2_bcsubamp in directory /fh/fast/bloom_j/computational_notebooks/adingens/2017/EnvsAntigenicAtlas
+
+2018-08-23 10:50:37,373 - INFO - Progress is being logged to ./results/codoncounts/mut-DNA-rep3.log
+2018-08-23 10:50:41,108 - INFO - Version information:
+	Time and date: Thu Aug 23 10:50:37 2018
+	Platform: Linux-3.13.0-143-generic-x86_64-with-debian-jessie-sid
+	Python version: 3.6.5 |Anaconda, Inc.| (default, Apr 29 2018, 16:14:56)  [GCC 7.2.0]
+	dms_tools2 version: 2.2.8
+	Bio version: 1.72
+	HTSeq version: 0.10.0
+	pandas version: 0.23.3
+	numpy version: 1.15.0
+	IPython version: 6.4.0
+	jupyter version: 1.0.0
+	matplotlib version: 2.2.2
+	plotnine version: 0.3.0
+	natsort version: 5.3.3
+	pystan version: 2.16.0.0
+	scipy version: 1.1.0
+	seaborn version: 0.9.0
+	phydmslib version: 2.3.1
+	statsmodels version: 0.9.0
+	rpy2 version: 2.9.1
+
+2018-08-23 10:50:41,109 - INFO - Parsed the following arguments:
+	outdir = ./results/codoncounts
+	ncpus = -1
+	use_existing = yes
+	refseq = ./data/BG505.W6.C2.T332N_env.fasta
+	alignspecs = ['87,375,39,36', '376,666,36,39', '663,954,33,41', '955,1228,33,37', '1228,1527,34,35', '1527,1815,32,39', '1816,2098,36,41']
+	bclen = 8
+	fastqdir = ./results/FASTQ_files/
+	R2 = None
+	R1trim = [200]
+	R2trim = [170]
+	bclen2 = None
+	chartype = codon
+	maxmuts = 4
+	minq = 15
+	minreads = 2
+	minfraccall = 0.95
+	minconcur = 0.75
+	sitemask = None
+	purgeread = 0
+	purgebc = 0
+	bcinfo = False
+	name = mut-DNA-rep3
+	R1 = ['BG505_mut-DNA-rep3_R1.fastq.gz']
+
+2018-08-23 10:50:41,127 - INFO - Read refseq of 2583 codons from ./data/BG505.W6.C2.T332N_env.fasta
+2018-08-23 10:50:41,128 - INFO - Reads are in these FASTQ pairs:
+	./results/FASTQ_files/BG505_mut-DNA-rep3_R1.fastq.gz and ./results/FASTQ_files/BG505_mut-DNA-rep3_R2.fastq.gz
+
+2018-08-23 10:50:41,129 - INFO - Now parsing read pairs...
+2018-08-23 10:50:52,773 - INFO - Reads parsed so far: 500000
+2018-08-23 10:51:04,374 - INFO - Reads parsed so far: 1000000
+2018-08-23 10:51:15,460 - INFO - Reads parsed so far: 1500000
+2018-08-23 10:51:26,742 - INFO - Reads parsed so far: 2000000
+2018-08-23 10:51:38,145 - INFO - Reads parsed so far: 2500000
+2018-08-23 10:51:49,772 - INFO - Reads parsed so far: 3000000
+2018-08-23 10:52:00,465 - INFO - Reads parsed so far: 3500000
+2018-08-23 10:52:12,513 - INFO - Reads parsed so far: 4000000
+2018-08-23 10:52:23,232 - INFO - Reads parsed so far: 4500000
+2018-08-23 10:52:35,609 - INFO - Reads parsed so far: 5000000
+2018-08-23 10:52:46,637 - INFO - Reads parsed so far: 5500000
+2018-08-23 10:52:57,613 - INFO - Reads parsed so far: 6000000
+2018-08-23 10:53:11,108 - INFO - Reads parsed so far: 6500000
+2018-08-23 10:53:22,002 - INFO - Reads parsed so far: 7000000
+2018-08-23 10:53:32,826 - INFO - Reads parsed so far: 7500000
+2018-08-23 10:53:43,592 - INFO - Reads parsed so far: 8000000
+2018-08-23 10:53:58,012 - INFO - Reads parsed so far: 8500000
+2018-08-23 10:54:08,784 - INFO - Reads parsed so far: 9000000
+2018-08-23 10:54:19,548 - INFO - Reads parsed so far: 9500000
+2018-08-23 10:54:30,310 - INFO - Reads parsed so far: 10000000
+2018-08-23 10:54:41,125 - INFO - Reads parsed so far: 10500000
+2018-08-23 10:54:56,390 - INFO - Reads parsed so far: 11000000
+2018-08-23 10:55:07,294 - INFO - Reads parsed so far: 11500000
+2018-08-23 10:55:18,102 - INFO - Reads parsed so far: 12000000
+2018-08-23 10:55:28,899 - INFO - Reads parsed so far: 12500000
+2018-08-23 10:55:39,759 - INFO - Reads parsed so far: 13000000
+2018-08-23 10:55:50,661 - INFO - Reads parsed so far: 13500000
+2018-08-23 10:56:01,633 - INFO - Reads parsed so far: 14000000
+2018-08-23 10:56:12,483 - INFO - Reads parsed so far: 14500000
+2018-08-23 10:56:23,339 - INFO - Reads parsed so far: 15000000
+2018-08-23 10:56:40,306 - INFO - Reads parsed so far: 15500000
+2018-08-23 10:56:51,177 - INFO - Reads parsed so far: 16000000
+2018-08-23 10:57:02,534 - INFO - Reads parsed so far: 16500000
+2018-08-23 10:57:13,812 - INFO - Reads parsed so far: 17000000
+2018-08-23 10:57:24,960 - INFO - Reads parsed so far: 17500000
+2018-08-23 10:57:36,153 - INFO - Reads parsed so far: 18000000
+2018-08-23 10:57:47,216 - INFO - Reads parsed so far: 18500000
+2018-08-23 10:57:51,390 - INFO - Parsed 18688204 reads, found 9548961 unique barcodes.
+2018-08-23 10:57:51,396 - INFO - Summary stats on reads:
+total  fail filter  low Q barcode
+18688204            0        2089323
+2018-08-23 10:57:51,396 - INFO - Writing these stats to ./results/codoncounts/mut-DNA-rep3_readstats.csv
+
+2018-08-23 10:57:54,252 - INFO - Number of reads per barcode:
+                 number of barcodes
+number of reads                    
+1                           5837325
+2                           1771552
+3                           1065985
+4                            528570
+5                            223021
+6                             83237
+7                             27422
+8                              8420
+9                              2415
+10                              729
+11                              214
+12                               48
+13                               13
+14                                6
+15                                1
+16                                1
+18                                1
+119                               1
+2018-08-23 10:57:54,252 - INFO - Writing these stats to ./results/codoncounts/mut-DNA-rep3_readsperbc.csv
+
+2018-08-23 10:57:54,257 - INFO - Examining the 9548961 barcodes to build and align subamplicons...
+2018-08-23 10:58:02,109 - INFO - Barcodes examined so far: 200000
+2018-08-23 10:58:09,840 - INFO - Barcodes examined so far: 400000
+2018-08-23 10:58:17,431 - INFO - Barcodes examined so far: 600000
+2018-08-23 10:58:24,853 - INFO - Barcodes examined so far: 800000
+2018-08-23 10:58:32,128 - INFO - Barcodes examined so far: 1000000
+2018-08-23 10:58:39,274 - INFO - Barcodes examined so far: 1200000
+2018-08-23 10:58:46,278 - INFO - Barcodes examined so far: 1400000
+2018-08-23 10:58:53,130 - INFO - Barcodes examined so far: 1600000
+2018-08-23 10:58:59,692 - INFO - Barcodes examined so far: 1800000
+2018-08-23 10:59:06,290 - INFO - Barcodes examined so far: 2000000
+2018-08-23 10:59:12,890 - INFO - Barcodes examined so far: 2200000
+2018-08-23 10:59:19,374 - INFO - Barcodes examined so far: 2400000
+2018-08-23 10:59:25,750 - INFO - Barcodes examined so far: 2600000
+2018-08-23 10:59:31,992 - INFO - Barcodes examined so far: 2800000
+2018-08-23 10:59:38,119 - INFO - Barcodes examined so far: 3000000
+2018-08-23 10:59:44,036 - INFO - Barcodes examined so far: 3200000
+2018-08-23 10:59:49,659 - INFO - Barcodes examined so far: 3400000
+2018-08-23 10:59:55,478 - INFO - Barcodes examined so far: 3600000
+2018-08-23 11:00:01,108 - INFO - Barcodes examined so far: 3800000
+2018-08-23 11:00:06,621 - INFO - Barcodes examined so far: 4000000
+2018-08-23 11:00:12,006 - INFO - Barcodes examined so far: 4200000
+2018-08-23 11:00:17,220 - INFO - Barcodes examined so far: 4400000
+2018-08-23 11:00:22,279 - INFO - Barcodes examined so far: 4600000
+2018-08-23 11:00:27,089 - INFO - Barcodes examined so far: 4800000
+2018-08-23 11:00:31,894 - INFO - Barcodes examined so far: 5000000
+2018-08-23 11:00:36,529 - INFO - Barcodes examined so far: 5200000
+2018-08-23 11:00:40,864 - INFO - Barcodes examined so far: 5400000
+2018-08-23 11:00:45,044 - INFO - Barcodes examined so far: 5600000
+2018-08-23 11:00:48,974 - INFO - Barcodes examined so far: 5800000
+2018-08-23 11:00:52,661 - INFO - Barcodes examined so far: 6000000
+2018-08-23 11:00:56,229 - INFO - Barcodes examined so far: 6200000
+2018-08-23 11:00:59,611 - INFO - Barcodes examined so far: 6400000
+2018-08-23 11:01:02,801 - INFO - Barcodes examined so far: 6600000
+2018-08-23 11:01:05,786 - INFO - Barcodes examined so far: 6800000
+2018-08-23 11:01:08,500 - INFO - Barcodes examined so far: 7000000
+2018-08-23 11:01:11,174 - INFO - Barcodes examined so far: 7200000
+2018-08-23 11:01:13,661 - INFO - Barcodes examined so far: 7400000
+2018-08-23 11:01:15,950 - INFO - Barcodes examined so far: 7600000
+2018-08-23 11:01:17,992 - INFO - Barcodes examined so far: 7800000
+2018-08-23 11:01:19,809 - INFO - Barcodes examined so far: 8000000
+2018-08-23 11:01:21,470 - INFO - Barcodes examined so far: 8200000
+2018-08-23 11:01:22,935 - INFO - Barcodes examined so far: 8400000
+2018-08-23 11:01:24,187 - INFO - Barcodes examined so far: 8600000
+2018-08-23 11:01:25,185 - INFO - Barcodes examined so far: 8800000
+2018-08-23 11:01:26,101 - INFO - Barcodes examined so far: 9000000
+2018-08-23 11:01:26,710 - INFO - Barcodes examined so far: 9200000
+2018-08-23 11:01:27,074 - INFO - Barcodes examined so far: 9400000
+2018-08-23 11:01:27,209 - INFO - Examined all barcodes. Summary stats:
+total  too few reads  not alignable  aligned
+9548961        5837325        1486671  2224965
+2018-08-23 11:01:27,209 - INFO - Writing these stats to ./results/codoncounts/mut-DNA-rep3_bcstats.csv
+
+2018-08-23 11:01:27,230 - INFO - Writing the counts of each codon identity at each site to ./results/codoncounts/mut-DNA-rep3_codoncounts.csv
+
+2018-08-23 11:01:27,280 - INFO - Successful completion of dms2_bcsubamp

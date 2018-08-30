@@ -1,0 +1,66 @@
+2018-08-30 15:56:00,091 - INFO - Beginning execution of dms2_logoplot in directory /fh/fast/bloom_j/computational_notebooks/adingens/2017/EnvsAntigenicAtlas
+
+2018-08-30 15:56:00,091 - INFO - Progress is being logged to ./results/fracsurviveaboveavg/concavg_wtDNA_ctrl/SigSiteOverlays_4angstrom/10E8-median-annotated.log
+2018-08-30 15:56:01,351 - INFO - Version information:
+	Time and date: Thu Aug 30 15:56:00 2018
+	Platform: Linux-3.13.0-143-generic-x86_64-with-debian-jessie-sid
+	Python version: 3.6.5 |Anaconda, Inc.| (default, Apr 29 2018, 16:14:56)  [GCC 7.2.0]
+	dms_tools2 version: 2.2.8
+	Bio version: 1.72
+	HTSeq version: 0.10.0
+	pandas version: 0.23.3
+	numpy version: 1.15.0
+	IPython version: 6.4.0
+	jupyter version: 1.0.0
+	matplotlib version: 2.2.2
+	plotnine version: 0.3.0
+	natsort version: 5.3.3
+	pystan version: 2.16.0.0
+	scipy version: 1.1.0
+	seaborn version: 0.9.0
+	phydmslib version: 2.3.1
+	statsmodels version: 0.9.0
+	rpy2 version: 2.9.1
+
+2018-08-30 15:56:01,352 - INFO - Parsed the following arguments:
+	outdir = ./results/fracsurviveaboveavg/concavg_wtDNA_ctrl/SigSiteOverlays_4angstrom/
+	ncpus = -1
+	use_existing = no
+	prefs = None
+	diffsel = None
+	fracsurvive = ./results/fracsurviveaboveavg/concavg_wtDNA_ctrl/summary_10E8-medianmutfracsurvive.csv
+	diffprefs = None
+	name = 10E8-median-annotated
+	nperline = 84
+	numberevery = 10
+	excludestop = no
+	stringency = 1
+	restrictdiffsel = all
+	diffselrange = None
+	fracsurvivemax = None
+	sortsites = yes
+	mapmetric = functionalgroup
+	colormap = jet
+	overlay1 = ['./results/fracsurviveaboveavg/concavg_wtDNA_ctrl/summary_10E8-medianmutfracsurvive.csv', 'wildtype', 'wildtype']
+	overlay2 = ['./results/fracsurvive/concavg_wtDNA_ctrl/SigSiteOverlays_4angstrom/10E8_SignificantSitesOverlay.csv', 'cs', 'ContactAndOrSignificant']
+	overlay3 = None
+	underlay = yes
+	scalebar = ['0.1', 'fraction surviving above avg = 0.1']
+	overlaycolormap = viridis
+	letterheight = 1
+	ignore_extracols = no
+	sepline = no
+
+2018-08-30 15:56:01,354 - INFO - Reading fracsurvive from file ./results/fracsurviveaboveavg/concavg_wtDNA_ctrl/summary_10E8-medianmutfracsurvive.csv...
+2018-08-30 15:56:01,381 - INFO - Read data for 670 sites.
+
+2018-08-30 15:56:01,423 - INFO - Reading overlay for wildtype from ./results/fracsurviveaboveavg/concavg_wtDNA_ctrl/summary_10E8-medianmutfracsurvive.csv...
+2018-08-30 15:56:01,486 - INFO - Read overlay for 670 sites.
+
+2018-08-30 15:56:01,486 - INFO - Reading overlay for cs from ./results/fracsurvive/concavg_wtDNA_ctrl/SigSiteOverlays_4angstrom/10E8_SignificantSitesOverlay.csv...
+2018-08-30 15:56:01,493 - INFO - Read overlay for 15 sites.
+
+2018-08-30 15:56:01,493 - INFO - Making logo plot ./results/fracsurviveaboveavg/concavg_wtDNA_ctrl/SigSiteOverlays_4angstrom/10E8-median-annotated_fracsurvive.pdf...
+2018-08-30 15:56:07,532 - INFO - Successfully created logo plot.
+
+2018-08-30 15:56:07,533 - INFO - Successful completion of dms2_logoplot

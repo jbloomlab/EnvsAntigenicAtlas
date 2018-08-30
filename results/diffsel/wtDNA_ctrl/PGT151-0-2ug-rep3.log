@@ -1,0 +1,72 @@
+2018-08-30 15:48:50,552 - INFO - Beginning execution of dms2_diffsel in directory /fh/fast/bloom_j/computational_notebooks/adingens/2017/EnvsAntigenicAtlas
+
+2018-08-30 15:48:50,552 - INFO - Progress is being logged to ./results/diffsel/wtDNA_ctrl/PGT151-0-2ug-rep3.log
+2018-08-30 15:49:01,942 - INFO - Version information:
+	Time and date: Thu Aug 30 15:48:50 2018
+	Platform: Linux-3.13.0-143-generic-x86_64-with-debian-jessie-sid
+	Python version: 3.6.5 |Anaconda, Inc.| (default, Apr 29 2018, 16:14:56)  [GCC 7.2.0]
+	dms_tools2 version: 2.2.8
+	Bio version: 1.72
+	HTSeq version: 0.10.0
+	pandas version: 0.23.3
+	numpy version: 1.15.0
+	IPython version: 6.4.0
+	jupyter version: 1.0.0
+	matplotlib version: 2.2.2
+	plotnine version: 0.3.0
+	natsort version: 5.3.3
+	pystan version: 2.16.0.0
+	scipy version: 1.1.0
+	seaborn version: 0.9.0
+	phydmslib version: 2.3.1
+	statsmodels version: 0.9.0
+	rpy2 version: 2.9.1
+
+2018-08-30 15:49:01,943 - INFO - Parsed the following arguments:
+	outdir = ./results/diffsel/wtDNA_ctrl
+	ncpus = 1
+	use_existing = yes
+	indir = ./results/renumberedcounts
+	chartype = codon_to_aa
+	excludestop = yes
+	pseudocount = 5.0
+	mincount = 0
+	name = PGT151-0-2ug-rep3
+	sel = mut-virus-rep3-PGT151-0-2ug
+	mock = mut-virus-rep3
+	err = wt-DNA-rep3
+
+2018-08-30 15:49:01,945 - INFO - Reading selected sample counts from mut-virus-rep3-PGT151-0-2ug
+2018-08-30 15:49:01,978 - INFO - Reading mock-selected sample counts from mut-virus-rep3
+2018-08-30 15:49:02,031 - INFO - Reading error-control sample counts from wt-DNA-rep3
+2018-08-30 15:49:02,066 - INFO - Computing mutdiffsel...
+2018-08-30 15:49:09,225 - INFO - Mutations with largest mutdiffsel:
+site wildtype mutation  mutdiffsel
+613        S        Y        3.47
+612        S        P        3.10
+613        S        L        3.05
+613        S        V        3.01
+611        N        R        3.00
+611        N        S        2.92
+611        N        K        2.89
+613        S        D        2.79
+639        T        A        2.76
+613        S        A        2.68
+
+2018-08-30 15:49:09,226 - INFO - Writing to ./results/diffsel/wtDNA_ctrl/PGT151-0-2ug-rep3_mutdiffsel.csv
+2018-08-30 15:49:09,290 - INFO - Computing sitediffsel...
+2018-08-30 15:49:09,317 - INFO - Sites with largest absolute sitediffsel:
+site  abs_diffsel  positive_diffsel  negative_diffsel  max_diffsel  min_diffsel
+ 613        42.26             41.74             -0.52         3.47        -0.30
+ 611        34.55             34.55              0.00         3.00         0.00
+ 325        20.90              1.20            -19.70         0.65        -2.49
+ 207        17.96              0.77            -17.19         0.77        -2.77
+ 637        16.69             15.42             -1.27         1.91        -0.68
+ 384        16.48              1.24            -15.24         0.79        -2.34
+ 512        16.18             16.18              0.00         1.77         0.00
+ 639        15.60             14.09             -1.51         2.76        -0.67
+ 629        14.83             11.59             -3.24         1.62        -1.36
+322a        14.35             12.44             -1.91         1.51        -0.90
+
+2018-08-30 15:49:09,318 - INFO - Writing to ./results/diffsel/wtDNA_ctrl/PGT151-0-2ug-rep3_sitediffsel.csv
+2018-08-30 15:49:09,327 - INFO - Successful completion of dms2_diffsel

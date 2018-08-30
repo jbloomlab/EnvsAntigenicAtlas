@@ -1,0 +1,111 @@
+2018-08-27 19:29:38,462 - INFO - Beginning execution of dms2_batch_fracsurvive in directory /fh/fast/bloom_j/computational_notebooks/adingens/2017/EnvsAntigenicAtlas
+
+2018-08-27 19:29:38,462 - INFO - Progress is being logged to ./results/fracsurviveaboveavg/concavg_wtDNA_ctrl/summary.log
+2018-08-27 19:29:39,558 - INFO - Version information:
+	Time and date: Mon Aug 27 19:29:38 2018
+	Platform: Linux-3.13.0-143-generic-x86_64-with-debian-jessie-sid
+	Python version: 3.6.5 |Anaconda, Inc.| (default, Apr 29 2018, 16:14:56)  [GCC 7.2.0]
+	dms_tools2 version: 2.2.8
+	Bio version: 1.72
+	HTSeq version: 0.10.0
+	pandas version: 0.23.3
+	numpy version: 1.15.0
+	IPython version: 6.4.0
+	jupyter version: 1.0.0
+	matplotlib version: 2.2.2
+	plotnine version: 0.3.0
+	natsort version: 5.3.3
+	pystan version: 2.16.0.0
+	scipy version: 1.1.0
+	seaborn version: 0.9.0
+	phydmslib version: 2.3.1
+	statsmodels version: 0.9.0
+	rpy2 version: 2.9.1
+
+2018-08-27 19:29:39,558 - INFO - Parsed the following arguments:
+	outdir = ./results/fracsurviveaboveavg/concavg_wtDNA_ctrl
+	ncpus = -1
+	use_existing = yes
+	indir = ./results/renumberedcounts
+	chartype = codon_to_aa
+	aboveavg = yes
+	excludestop = yes
+	pseudocount = 5
+	mincount = 0
+	batchfile = ./results/fracsurvive/concavg_wtDNA_ctrl/batch.csv
+	summaryprefix = summary
+
+2018-08-27 19:29:39,558 - INFO - Parsing info from ./results/fracsurvive/concavg_wtDNA_ctrl/batch.csv
+2018-08-27 19:29:39,582 - INFO - Read the following sample information:
+group,name,sel,mock,err,mds_names,libfracsurvive
+101074,3ug-rep2b,mut-virus-rep2b-101074-3ug,mut-virus-rep2b,wt-DNA-rep2,101074-3ug-rep2b,0.019201833
+101074,4ug-rep2b,mut-virus-rep2b-101074-4ug,mut-virus-rep2b,wt-DNA-rep2,101074-4ug-rep2b,0.015257328999999997
+101074,4ug-rep3b,mut-virus-rep3b-101074-4ug,mut-virus-rep3b,wt-DNA-rep3,101074-4ug-rep3b,0.003771044
+101074,4ug-rep1b,mut-virus-rep1b-101074-4ug,mut-virus-rep1b,wt-DNA-rep1,101074-4ug-rep1b,0.011481481000000002
+10E8,60ug-rep1,mut-virus-rep1-10E8-60ug,mut-virus-rep1,wt-DNA-rep1,10E8-60ug-rep1,0.001157
+10E8,60ug-rep3,mut-virus-rep3-10E8-60ug,mut-virus-rep3,wt-DNA-rep3,10E8-60ug-rep3,0.002491
+3BN-1074-pool,3ug-rep1b,mut-virus-rep1b-3BN-1074-pool-3ug,mut-virus-rep1b,wt-DNA-rep1,3BN-1074-pool-3ug-rep1b,0.001419753
+3BN-1074-pool,3ug-rep3b,mut-virus-rep3b-3BN-1074-pool-3ug,mut-virus-rep3b,wt-DNA-rep3,3BN-1074-pool-3ug-rep3b,0.001520914
+3BN-1074-pool,4ug-rep1b,mut-virus-rep1b-3BN-1074-pool-4ug,mut-virus-rep1b,wt-DNA-rep1,3BN-1074-pool-4ug-rep1b,0.001074074
+3BN-1074-pool,4ug-rep3b,mut-virus-rep3b-3BN-1074-pool-4ug,mut-virus-rep3b,wt-DNA-rep3,3BN-1074-pool-4ug-rep3b,0.000413162
+3BN-1074-pool,4ug-rep2b,mut-virus-rep2b-3BN-1074-pool-4ug,mut-virus-rep2b,wt-DNA-rep2,3BN-1074-pool-4ug-rep2b,0.00034106
+3BN-1074-pool,3ug-rep2b,mut-virus-rep2b-3BN-1074-pool-3ug,mut-virus-rep2b,wt-DNA-rep2,3BN-1074-pool-3ug-rep2b,0.001886867
+3BNC117,4ug-rep1b,mut-virus-rep1b-3BNC117-4ug,mut-virus-rep1b,wt-DNA-rep1,3BNC117-4ug-rep1b,0.008765432
+3BNC117,3ug-rep2b,mut-virus-rep2b-3BNC117-3ug,mut-virus-rep2b,wt-DNA-rep2,3BNC117-3ug-rep2b,0.009847121
+3BNC117,4ug-rep3b,mut-virus-rep3b-3BNC117-4ug,mut-virus-rep3b,wt-DNA-rep3,3BNC117-4ug-rep3b,0.006474654
+3BNC117,4ug-rep2b,mut-virus-rep2b-3BNC117-4ug,mut-virus-rep2b,wt-DNA-rep2,3BNC117-4ug-rep2b,0.022027114
+PG9,10ug-rep1,mut-virus-rep1-smear-PG9-10ug,mut-virus-rep1,wt-DNA-rep1,PG9-10ug-rep1-smear,0.025034
+PG9,10ug-rep3,mut-virus-rep3-PG9-10ug,mut-virus-rep3,wt-DNA-rep3,PG9-10ug-rep3,0.016036
+PGT121,4-25ug-rep2b,mut-virus-rep2b-PGT121-4-25ug,mut-virus-rep2b,wt-DNA-rep2,PGT121-4-25ug-rep2b,0.00338328
+PGT121,3-5ug-rep2b,mut-virus-rep2b-PGT121-3-5ug,mut-virus-rep2b,wt-DNA-rep2,PGT121-3-5ug-rep2b,0.007412217
+PGT121,3-5ug-rep3b,mut-virus-rep3b-PGT121-3-5ug,mut-virus-rep3b,wt-DNA-rep3,PGT121-3-5ug-rep3b,0.012454643
+PGT121,3-5ug-rep1,mut-virus-rep1-PGT121-3-5ug,mut-virus-rep1,wt-DNA-rep1,PGT121-3-5ug-rep1,0.010645
+PGT145,125ug-rep2b,mut-virus-rep2b-PGT145-125ug,mut-virus-rep2b,wt-DNA-rep2,PGT145-125ug-rep2b,0.028826073
+PGT145,125ug-rep1b,mut-virus-rep1b-PGT145-125ug,mut-virus-rep1b,wt-DNA-rep1,PGT145-125ug-rep1b,0.031111111
+PGT145,125ug-rep3b,mut-virus-rep3b-PGT145-125ug,mut-virus-rep3b,wt-DNA-rep3,PGT145-125ug-rep3b,0.033074514
+PGT151,0-2ug-rep3,mut-virus-rep3-PGT151-0-2ug,mut-virus-rep3,wt-DNA-rep3,PGT151-0-2ug-rep3,0.035396
+PGT151,0-2ug-rep1,mut-virus-rep1-PGT151-0-2ug,mut-virus-rep1,wt-DNA-rep1,PGT151-0-2ug-rep1,0.020718
+VRC01,11ug-rep1,mut-virus-rep1-VRC01-11ug,mut-virus-rep1,wt-DNA-rep1,VRC01-11ug-rep1,0.002029
+VRC01,8ug-rep2,mut-virus-rep2-VRC01-8ug,mut-virus-rep2,wt-DNA-rep2,VRC01-8ug-rep2,0.027775
+VRC01,11ug-rep2,mut-virus-rep2-VRC01-11ug,mut-virus-rep2,wt-DNA-rep2,VRC01-11ug-rep2,0.009827
+VRC01,11ug-rep3-tr2,mut-virus-rep3-VRC01-tr2-11ug,mut-virus-rep3,wt-DNA-rep3,VRC01-11ug-rep3-tr2,0.001008
+VRC01,11ug-rep3,mut-virus-rep3-VRC01-11ug,mut-virus-rep3,wt-DNA-rep3,VRC01-11ug-rep3,0.0072260000000000015
+VRC34,33ug-rep3,mut-virus-rep3-VRC34-33ug,mut-virus-rep3,wt-DNA-rep3,VRC34-33ug-rep3,0.050239
+VRC34,33ug-rep1,mut-virus-rep1-VRC34-33ug,mut-virus-rep1,wt-DNA-rep1,VRC34-33ug-rep1,0.063644
+
+
+2018-08-27 19:29:39,611 - INFO - Running dms2_fracsurvive on all samples...
+2018-08-27 19:29:45,828 - INFO - Completed runs of dms2_fracsurvive.
+
+2018-08-27 19:29:45,845 - ERROR - Terminating dms2_batch_fracsurvive with ERROR
+Traceback (most recent call last):
+  File "/fh/fast/bloom_j/software/conda/envs/BloomLab/bin/dms2_batch_fracsurvive", line 161, in main
+    "{1}:\n{2}".format(f, flog, ''.join(lines[-25 : ])))
+RuntimeError: Failed to create ./results/fracsurviveaboveavg/concavg_wtDNA_ctrl/PGT151-0-2ug-rep3_mutfracsurvive.csv.
+Here is end of ./results/fracsurviveaboveavg/concavg_wtDNA_ctrl/PGT151-0-2ug-rep3.log:
+	rpy2 version: 2.9.1
+
+2018-08-27 19:29:45,337 - INFO - Parsed the following arguments:
+	outdir = ./results/fracsurviveaboveavg/concavg_wtDNA_ctrl
+	ncpus = 1
+	use_existing = yes
+	indir = ./results/renumberedcounts
+	chartype = codon_to_aa
+	aboveavg = yes
+	excludestop = yes
+	pseudocount = 5.0
+	mincount = 0
+	name = PGT151-0-2ug-rep3
+	sel = mut-virus-rep3-PGT151-0-2ug
+	mock = mut-virus-rep3
+	libfracsurvive = 0.035396
+	err = wt-DNA-rep3
+
+2018-08-27 19:29:45,338 - INFO - Reading selected sample counts from mut-virus-rep3-PGT151-0-2ug
+2018-08-27 19:29:45,339 - ERROR - Terminating dms2_fracsurvive with ERROR
+Traceback (most recent call last):
+  File "/fh/fast/bloom_j/software/conda/envs/BloomLab/bin/dms2_fracsurvive", line 95, in main
+    .format(desc, fname))
+ValueError: Missing file for --selected sample:
+./results/renumberedcounts/mut-virus-rep3-PGT151-0-2ug
+

@@ -1,0 +1,74 @@
+2018-08-23 13:01:47,633 - INFO - Beginning execution of dms2_fracsurvive in directory /fh/fast/bloom_j/computational_notebooks/adingens/2017/EnvsAntigenicAtlas
+
+2018-08-23 13:01:47,634 - INFO - Progress is being logged to ./results/fracsurvive/concavg_wtDNA_ctrl/3BN-1074-pool-4ug-rep1b.log
+2018-08-23 13:01:59,354 - INFO - Version information:
+	Time and date: Thu Aug 23 13:01:47 2018
+	Platform: Linux-3.13.0-143-generic-x86_64-with-debian-jessie-sid
+	Python version: 3.6.5 |Anaconda, Inc.| (default, Apr 29 2018, 16:14:56)  [GCC 7.2.0]
+	dms_tools2 version: 2.2.8
+	Bio version: 1.72
+	HTSeq version: 0.10.0
+	pandas version: 0.23.3
+	numpy version: 1.15.0
+	IPython version: 6.4.0
+	jupyter version: 1.0.0
+	matplotlib version: 2.2.2
+	plotnine version: 0.3.0
+	natsort version: 5.3.3
+	pystan version: 2.16.0.0
+	scipy version: 1.1.0
+	seaborn version: 0.9.0
+	phydmslib version: 2.3.1
+	statsmodels version: 0.9.0
+	rpy2 version: 2.9.1
+
+2018-08-23 13:01:59,355 - INFO - Parsed the following arguments:
+	outdir = ./results/fracsurvive/concavg_wtDNA_ctrl
+	ncpus = 1
+	use_existing = yes
+	indir = ./results/renumberedcounts
+	chartype = codon_to_aa
+	aboveavg = no
+	excludestop = yes
+	pseudocount = 5.0
+	mincount = 0
+	name = 3BN-1074-pool-4ug-rep1b
+	sel = mut-virus-rep1b-3BN-1074-pool-4ug
+	mock = mut-virus-rep1b
+	libfracsurvive = 0.001074074
+	err = wt-DNA-rep1
+
+2018-08-23 13:01:59,358 - INFO - Reading selected sample counts from mut-virus-rep1b-3BN-1074-pool-4ug
+2018-08-23 13:01:59,389 - INFO - Reading mock-selected sample counts from mut-virus-rep1b
+2018-08-23 13:01:59,404 - INFO - Reading error-control sample counts from wt-DNA-rep1
+2018-08-23 13:01:59,418 - INFO - Computing fracsurvive for each mutation...
+2018-08-23 13:02:07,276 - INFO - Mutations with largest mutfracsurvive:
+site wildtype mutation  mutfracsurvive
+ 332        N        V            0.02
+ 130        Q        G            0.02
+ 334        S        V            0.02
+322a        I        N            0.02
+184b        E        D            0.02
+ 417        P        Y            0.02
+ 592        L        S            0.02
+ 517        A        H            0.02
+ 193        L        F            0.02
+ 415        T        K            0.02
+
+2018-08-23 13:02:07,277 - INFO - Writing to ./results/fracsurvive/concavg_wtDNA_ctrl/3BN-1074-pool-4ug-rep1b_mutfracsurvive.csv
+2018-08-23 13:02:07,347 - INFO - Computing sitefracsurvive...
+2018-08-23 13:02:07,375 - INFO - Sites with largest avgfracsurvive:
+site  avgfracsurvive  maxfracsurvive
+ 334            0.00            0.02
+ 305            0.00            0.01
+ 325            0.00            0.01
+ 124            0.00            0.01
+ 507            0.00            0.01
+ 332            0.00            0.02
+ 132            0.00            0.01
+322a            0.00            0.02
+ 204            0.00            0.01
+ 509            0.00            0.01
+
+2018-08-23 13:02:07,376 - INFO - Writing to ./results/fracsurvive/concavg_wtDNA_ctrl/3BN-1074-pool-4ug-rep1b_sitefracsurvive.csv
+2018-08-23 13:02:07,400 - INFO - Successful completion of dms2_fracsurvive

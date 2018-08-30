@@ -1,0 +1,132 @@
+2018-08-27 20:09:49,630 - INFO - Beginning execution of dms2_batch_bcsubamp in directory /fh/fast/bloom_j/computational_notebooks/adingens/2017/EnvsAntigenicAtlas
+
+2018-08-27 20:09:49,631 - INFO - Progress is being logged to ./results/codoncounts/summary.log
+2018-08-27 20:09:50,650 - INFO - Version information:
+	Time and date: Mon Aug 27 20:09:49 2018
+	Platform: Linux-3.13.0-143-generic-x86_64-with-debian-jessie-sid
+	Python version: 3.6.5 |Anaconda, Inc.| (default, Apr 29 2018, 16:14:56)  [GCC 7.2.0]
+	dms_tools2 version: 2.2.8
+	Bio version: 1.72
+	HTSeq version: 0.10.0
+	pandas version: 0.23.3
+	numpy version: 1.15.0
+	IPython version: 6.4.0
+	jupyter version: 1.0.0
+	matplotlib version: 2.2.2
+	plotnine version: 0.3.0
+	natsort version: 5.3.3
+	pystan version: 2.16.0.0
+	scipy version: 1.1.0
+	seaborn version: 0.9.0
+	phydmslib version: 2.3.1
+	statsmodels version: 0.9.0
+	rpy2 version: 2.9.1
+
+2018-08-27 20:09:50,650 - INFO - Parsed the following arguments:
+	outdir = ./results/codoncounts
+	ncpus = 14
+	use_existing = yes
+	refseq = ./data/BG505.W6.C2.T332N_env.fasta
+	alignspecs = ['87,375,39,36', '376,666,36,39', '663,954,33,41', '955,1228,33,37', '1228,1527,34,35', '1527,1815,32,39', '1816,2098,36,41']
+	bclen = 8
+	fastqdir = ./results/FASTQ_files/
+	R2 = None
+	R1trim = [200]
+	R2trim = [170]
+	bclen2 = None
+	chartype = codon
+	maxmuts = 4
+	minq = 15
+	minreads = 2
+	minfraccall = 0.95
+	minconcur = 0.75
+	sitemask = None
+	purgeread = 0
+	purgebc = 0
+	bcinfo = False
+	batchfile = ./results/codoncounts/batch.csv
+	summaryprefix = summary
+
+2018-08-27 20:09:50,654 - INFO - Removing existing file ./results/codoncounts/summary_readstats.pdf
+2018-08-27 20:09:50,665 - INFO - Removing existing file ./results/codoncounts/summary_bcstats.pdf
+2018-08-27 20:09:50,674 - INFO - Removing existing file ./results/codoncounts/summary_readsperbc.pdf
+2018-08-27 20:09:50,684 - INFO - Removing existing file ./results/codoncounts/summary_depth.pdf
+2018-08-27 20:09:50,695 - INFO - Removing existing file ./results/codoncounts/summary_mutfreq.pdf
+2018-08-27 20:09:50,704 - INFO - Removing existing file ./results/codoncounts/summary_codonmuttypes.pdf
+2018-08-27 20:09:50,714 - INFO - Removing existing file ./results/codoncounts/summary_codonmuttypes.csv
+2018-08-27 20:09:50,725 - INFO - Removing existing file ./results/codoncounts/summary_codonntchanges.pdf
+2018-08-27 20:09:50,736 - INFO - Removing existing file ./results/codoncounts/summary_singlentchanges.pdf
+2018-08-27 20:09:50,745 - INFO - Removing existing file ./results/codoncounts/summary_cumulmutcounts.pdf
+2018-08-27 20:09:50,753 - INFO - Parsing sample info from ./results/codoncounts/batch.csv
+2018-08-27 20:09:50,797 - INFO - Read the following sample information:
+name,R1
+mut-virus-rep2b-PGT121-3-5ug,BG505_mut-virus-rep2b-PGT121-3-5ug_R1.fastq.gz
+mut-virus-rep2b-101074-3ug,BG505_mut-virus-rep2b-101074-3ug_R1.fastq.gz
+mut-virus-rep2b-PGT121-4-25ug,BG505_mut-virus-rep2b-PGT121-4-25ug_R1.fastq.gz
+mut-virus-rep3,BG505_mut-virus-rep3_R1.fastq.gz
+mut-virus-rep2b-3BNC117-4ug,BG505_mut-virus-rep2b-3BNC117-4ug_R1.fastq.gz
+wt-virus-rep2b,BG505_wt-virus-rep2b_R1.fastq.gz
+mut-virus-rep1-VRC01-11ug,BG505_mut-virus-rep1-VRC01-11ug_R1.fastq.gz
+wt-virus-rep3,BG505_wt-virus-rep3_R1.fastq.gz
+mut-virus-rep3-3BNC117-1-1ug,BG505_mut-virus-rep3-3BNC117-1-1ug_R1.fastq.gz
+mut-virus-rep2b-3BN-1074-pool-4ug,BG505_mut-virus-rep2b-3BN-1074-pool-4ug_R1.fastq.gz
+mut-virus-rep1-VRC34-33ug,BG505_mut-virus-rep1-VRC34-33ug_R1.fastq.gz
+mut-virus-rep3-VRC34-11ug,BG505_mut-virus-rep3-VRC34-11ug_R1.fastq.gz
+mut-virus-rep1-10E8-60ug,BG505_mut-virus-rep1-10E8-60ug_R1.fastq.gz
+mut-virus-rep3-VRC01-tr2-11ug,BG505_mut-virus-rep3-VRC01-tr2-11ug_R1.fastq.gz
+mut-virus-rep2,BG505_mut-virus-rep2_R1.fastq.gz
+wt-DNA-rep2,BG505_wt-DNA-rep2_R1.fastq.gz
+mut-virus-rep1-PG9-10ug,BG505_mut-virus-rep1-PG9-10ug_R1.fastq.gz
+mut-virus-rep2b-PGT145-125ug,BG505_mut-virus-rep2b-PGT145-125ug_R1.fastq.gz
+mut-virus-rep3-PG9-10ug,BG505_mut-virus-rep3-PG9-10ug_R1.fastq.gz
+mut-DNA-rep2,BG505_mut-DNA-rep2_R1.fastq.gz
+mut-virus-rep1-smear-PG9-10ug,BG505_mut-virus-rep1-smear-PG9-10ug_R1.fastq.gz
+mut-virus-rep2b,BG505_mut-virus-rep2b_R1.fastq.gz
+mut-DNA-rep3,BG505_mut-DNA-rep3_R1.fastq.gz
+mut-virus-rep3-VRC34-33ug,BG505_mut-virus-rep3-VRC34-33ug_R1.fastq.gz
+mut-virus-rep2-VRC01-8ug,BG505_mut-virus-rep2-VRC01-8ug_R1.fastq.gz
+mut-virus-rep2b-3BN-1074-pool-3ug,BG505_mut-virus-rep2b-3BN-1074-pool-3ug_R1.fastq.gz
+wt-DNA-rep3,BG505_wt-DNA-rep3_R1.fastq.gz
+mut-virus-rep1-PGT151-0-2ug,BG505_mut-virus-rep1-PGT151-0-2ug_R1.fastq.gz
+wt-virus-rep2,BG505_wt-virus-rep2_R1.fastq.gz
+mut-virus-rep1-PGT121-3-5ug,BG505_mut-virus-rep1-PGT121-3-5ug_R1.fastq.gz
+mut-virus-rep2-VRC01-11ug,BG505_mut-virus-rep2-VRC01-11ug_R1.fastq.gz
+mut-virus-rep3-VRC01-11ug,BG505_mut-virus-rep3-VRC01-11ug_R1.fastq.gz
+wt-DNA-rep1,BG505_wt-DNA-rep1_R1.fastq.gz
+mut-virus-rep2b-3BNC117-3ug,BG505_mut-virus-rep2b-3BNC117-3ug_R1.fastq.gz
+mut-virus-rep1,BG505_mut-virus-rep1_R1.fastq.gz
+mut-virus-rep3-10E8-60ug,BG505_mut-virus-rep3-10E8-60ug_R1.fastq.gz
+mut-virus-rep2b-101074-4ug,BG505_mut-virus-rep2b-101074-4ug_R1.fastq.gz
+mut-DNA-rep1,BG505_mut-DNA-rep1_R1.fastq.gz
+wt-virus-rep1,BG505_wt-virus-rep1_R1.fastq.gz
+wt-virus-rep3b,BG505_wt-virus-rep3b_R1.fastq.gz
+mut-virus-rep3b-PGT145-125ug,BG505_mut-virus-rep3b-PGT145-125ug_R1.fastq.gz
+mut-virus-rep3b-PGT121-3-5ug,BG505_mut-virus-rep3b-PGT121-3-5ug_R1.fastq.gz
+mut-virus-rep3b-3BNC117-4ug,BG505_mut-virus-rep3b-3BNC117-4ug_R1.fastq.gz
+mut-virus-rep1b-101074-4ug,BG505_mut-virus-rep1b-101074-4ug_R1.fastq.gz
+wt-virus-rep1b,BG505_wt-virus-rep1b_R1.fastq.gz
+mut-virus-rep1b-3BNC117-4ug,BG505_mut-virus-rep1b-3BNC117-4ug_R1.fastq.gz
+mut-virus-rep1b-PGT145-125ug,BG505_mut-virus-rep1b-PGT145-125ug_R1.fastq.gz
+mut-virus-rep3b-3BN-1074-pool-3ug,BG505_mut-virus-rep3b-3BN-1074-pool-3ug_R1.fastq.gz
+mut-virus-rep3b-101074-4ug,BG505_mut-virus-rep3b-101074-4ug_R1.fastq.gz
+mut-virus-rep1b-3BN-1074-pool-3ug,BG505_mut-virus-rep1b-3BN-1074-pool-3ug_R1.fastq.gz
+mut-virus-rep1b-3BN-1074-pool-4ug,BG505_mut-virus-rep1b-3BN-1074-pool-4ug_R1.fastq.gz
+mut-virus-rep3b-3BN-1074-pool-4ug,BG505_mut-virus-rep3b-3BN-1074-pool-4ug_R1.fastq.gz
+mut-virus-rep1b,BG505_mut-virus-rep1b_R1.fastq.gz
+mut-virus-rep3b,BG505_mut-virus-rep3b_R1.fastq.gz
+mut-virus-rep3-PGT151-0-2ug,BG505_mut-virus-rep3-PGT151-0-2ug_R1.fastq.gz
+
+
+2018-08-27 20:09:50,800 - INFO - Running dms2_bcsubamp on all samples using 14 CPUs...
+2018-08-27 20:13:50,518 - INFO - Completed runs of dms2_bcsubamp.
+
+2018-08-27 20:13:50,707 - INFO - Plotting read stats to ./results/codoncounts/summary_readstats.pdf
+2018-08-27 20:13:53,614 - INFO - Plotting barcode stats to ./results/codoncounts/summary_bcstats.pdf
+2018-08-27 20:13:55,825 - INFO - Plotting reads per barcode to ./results/codoncounts/summary_readsperbc.pdf
+2018-08-27 20:14:01,802 - INFO - Plotting count depth to ./results/codoncounts/summary_depth.pdf
+2018-08-27 20:14:08,085 - INFO - Plotting mutation frequencies to ./results/codoncounts/summary_mutfreq.pdf
+2018-08-27 20:15:02,884 - INFO - Plotting average frequencies of codon mutation types to ./results/codoncounts/summary_codonmuttypes.pdf, writing the data to ./results/codoncounts/summary_codonmuttypes.csv
+2018-08-27 20:15:53,980 - INFO - Plotting average frequencies of nucleotide changes per codon mutation to ./results/codoncounts/summary_codonntchanges.pdf
+2018-08-27 20:16:43,841 - INFO - Plotting frequencies of nucleotide changes in 1-nucleotide mutations to ./results/codoncounts/summary_singlentchanges.pdf
+2018-08-27 20:17:33,975 - INFO - Plotting fraction of mutations seen less than some number of times to ./results/codoncounts/summary_cumulmutcounts.pdf
+2018-08-27 20:18:44,429 - INFO - Successful completion of dms2_batch_bcsubamp

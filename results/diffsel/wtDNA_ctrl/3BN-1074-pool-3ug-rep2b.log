@@ -1,0 +1,72 @@
+2018-08-30 15:48:50,608 - INFO - Beginning execution of dms2_diffsel in directory /fh/fast/bloom_j/computational_notebooks/adingens/2017/EnvsAntigenicAtlas
+
+2018-08-30 15:48:50,608 - INFO - Progress is being logged to ./results/diffsel/wtDNA_ctrl/3BN-1074-pool-3ug-rep2b.log
+2018-08-30 15:49:01,629 - INFO - Version information:
+	Time and date: Thu Aug 30 15:48:50 2018
+	Platform: Linux-3.13.0-143-generic-x86_64-with-debian-jessie-sid
+	Python version: 3.6.5 |Anaconda, Inc.| (default, Apr 29 2018, 16:14:56)  [GCC 7.2.0]
+	dms_tools2 version: 2.2.8
+	Bio version: 1.72
+	HTSeq version: 0.10.0
+	pandas version: 0.23.3
+	numpy version: 1.15.0
+	IPython version: 6.4.0
+	jupyter version: 1.0.0
+	matplotlib version: 2.2.2
+	plotnine version: 0.3.0
+	natsort version: 5.3.3
+	pystan version: 2.16.0.0
+	scipy version: 1.1.0
+	seaborn version: 0.9.0
+	phydmslib version: 2.3.1
+	statsmodels version: 0.9.0
+	rpy2 version: 2.9.1
+
+2018-08-30 15:49:01,630 - INFO - Parsed the following arguments:
+	outdir = ./results/diffsel/wtDNA_ctrl
+	ncpus = 1
+	use_existing = yes
+	indir = ./results/renumberedcounts
+	chartype = codon_to_aa
+	excludestop = yes
+	pseudocount = 5.0
+	mincount = 0
+	name = 3BN-1074-pool-3ug-rep2b
+	sel = mut-virus-rep2b-3BN-1074-pool-3ug
+	mock = mut-virus-rep2b
+	err = wt-DNA-rep2
+
+2018-08-30 15:49:01,633 - INFO - Reading selected sample counts from mut-virus-rep2b-3BN-1074-pool-3ug
+2018-08-30 15:49:01,667 - INFO - Reading mock-selected sample counts from mut-virus-rep2b
+2018-08-30 15:49:01,677 - INFO - Reading error-control sample counts from wt-DNA-rep2
+2018-08-30 15:49:01,688 - INFO - Computing mutdiffsel...
+2018-08-30 15:49:08,957 - INFO - Mutations with largest mutdiffsel:
+site wildtype mutation  mutdiffsel
+332        N        T        4.40
+334        S        I        3.96
+332        N        F        3.96
+379        G        C        3.85
+120        V        H        3.85
+332        N        Y        3.79
+448        N        Q        3.77
+332        N        L        3.74
+536        T        S        3.73
+332        N        I        3.71
+
+2018-08-30 15:49:08,957 - INFO - Writing to ./results/diffsel/wtDNA_ctrl/3BN-1074-pool-3ug-rep2b_mutdiffsel.csv
+2018-08-30 15:49:08,998 - INFO - Computing sitediffsel...
+2018-08-30 15:49:09,021 - INFO - Sites with largest absolute sitediffsel:
+site  abs_diffsel  positive_diffsel  negative_diffsel  max_diffsel  min_diffsel
+334        43.85             43.66             -0.19         3.96        -0.19
+332        42.55             40.58             -1.97         4.40        -1.24
+325        34.00             32.74             -1.26         3.43        -0.67
+ 77        32.77              5.73            -27.04         3.40        -3.27
+ 49        32.53              2.95            -29.57         1.67        -3.25
+430        32.39              4.25            -28.14         2.70        -2.91
+318        32.07             11.20            -20.87         3.42        -3.00
+431        31.94              1.42            -30.53         1.42        -4.06
+463        31.89              6.05            -25.84         2.14        -2.63
+268        31.16             11.72            -19.44         2.68        -3.27
+
+2018-08-30 15:49:09,021 - INFO - Writing to ./results/diffsel/wtDNA_ctrl/3BN-1074-pool-3ug-rep2b_sitediffsel.csv
+2018-08-30 15:49:09,034 - INFO - Successful completion of dms2_diffsel
