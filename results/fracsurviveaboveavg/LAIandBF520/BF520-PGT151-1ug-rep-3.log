@@ -1,0 +1,49 @@
+2018-11-08 14:24:02,808 - INFO - Beginning execution of dms2_fracsurvive in directory /fh/fast/bloom_j/computational_notebooks/adingens/2017/EnvsAntigenicAtlas
+
+2018-11-08 14:24:02,809 - INFO - Progress is being logged to ./results/fracsurviveaboveavg/LAIandBF520/BF520-PGT151-1ug-rep-3.log
+2018-11-08 14:24:02,813 - INFO - Version information:
+	Time and date: Thu Nov  8 14:24:02 2018
+	Platform: Linux-3.13.0-143-generic-x86_64-with-debian-jessie-sid
+	Python version: 3.6.5 |Anaconda, Inc.| (default, Apr 29 2018, 16:14:56)  [GCC 7.2.0]
+	dms_tools2 version: 2.3.0
+	Bio version: 1.72
+	HTSeq version: 0.11.0
+	pandas version: 0.23.4
+	numpy version: 1.15.1
+	IPython version: 6.5.0
+	jupyter version: 1.0.0
+	matplotlib version: 3.0.0
+	plotnine version: 0.5.0
+	natsort version: 5.4.1
+	pystan version: 2.16.0.0
+	scipy version: 1.1.0
+	seaborn version: 0.9.0
+	phydmslib version: 2.3.1
+	statsmodels version: 0.9.0
+	rpy2 version: 2.9.1
+	regex version: 2.4.148
+	umi_tools version unknown
+
+2018-11-08 14:24:02,814 - INFO - Parsed the following arguments:
+	outdir = ./results/fracsurviveaboveavg/LAIandBF520
+	ncpus = 18
+	use_existing = yes
+	indir = ./results/renumberedcounts
+	chartype = codon_to_aa
+	aboveavg = yes
+	excludestop = yes
+	pseudocount = 5.0
+	mincount = 0
+	name = BF520-PGT151-1ug-rep-3
+	sel = BF520-mut-virus-3-PGT151-1ug
+	mock = BF520-mut-virus-3
+	libfracsurvive = 0.0495
+	err = BF520-wt-DNA
+
+2018-11-08 14:24:02,821 - INFO - Reading selected sample counts from BF520-mut-virus-3-PGT151-1ug
+2018-11-08 14:24:02,821 - ERROR - Terminating dms2_fracsurvive with ERROR
+Traceback (most recent call last):
+  File "/fh/fast/bloom_j/software/conda/envs/BloomLab/bin/dms2_fracsurvive", line 95, in main
+    .format(desc, fname))
+ValueError: Missing file for --selected sample:
+./results/renumberedcounts/BF520-mut-virus-3-PGT151-1ug

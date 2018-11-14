@@ -1,0 +1,76 @@
+2018-11-08 14:32:23,039 - INFO - Beginning execution of dms2_fracsurvive in directory /fh/fast/bloom_j/computational_notebooks/adingens/2017/EnvsAntigenicAtlas
+
+2018-11-08 14:32:23,040 - INFO - Progress is being logged to ./results/fracsurvive/LAIandBF520/LAI-VRC01-9ug-rep3.log
+2018-11-08 14:32:23,045 - INFO - Version information:
+	Time and date: Thu Nov  8 14:32:23 2018
+	Platform: Linux-3.13.0-143-generic-x86_64-with-debian-jessie-sid
+	Python version: 3.6.5 |Anaconda, Inc.| (default, Apr 29 2018, 16:14:56)  [GCC 7.2.0]
+	dms_tools2 version: 2.3.0
+	Bio version: 1.72
+	HTSeq version: 0.11.0
+	pandas version: 0.23.4
+	numpy version: 1.15.1
+	IPython version: 6.5.0
+	jupyter version: 1.0.0
+	matplotlib version: 3.0.0
+	plotnine version: 0.5.0
+	natsort version: 5.4.1
+	pystan version: 2.16.0.0
+	scipy version: 1.1.0
+	seaborn version: 0.9.0
+	phydmslib version: 2.3.1
+	statsmodels version: 0.9.0
+	rpy2 version: 2.9.1
+	regex version: 2.4.148
+	umi_tools version unknown
+
+2018-11-08 14:32:23,045 - INFO - Parsed the following arguments:
+	outdir = ./results/fracsurvive/LAIandBF520
+	ncpus = 7
+	use_existing = yes
+	indir = ./results/renumberedcounts
+	chartype = codon_to_aa
+	aboveavg = no
+	excludestop = yes
+	pseudocount = 5.0
+	mincount = 0
+	name = LAI-VRC01-9ug-rep3
+	sel = LAI-mut-virus-rep3-VRC01-9ug
+	mock = LAI-mut-virus-rep3
+	libfracsurvive = 0.067211
+	err = LAI-wt-DNA-rep3
+
+2018-11-08 14:32:23,047 - INFO - Reading selected sample counts from LAI-mut-virus-rep3-VRC01-9ug
+2018-11-08 14:32:23,076 - INFO - Reading mock-selected sample counts from LAI-mut-virus-rep3
+2018-11-08 14:32:23,091 - INFO - Reading error-control sample counts from LAI-wt-DNA-rep3
+2018-11-08 14:32:23,101 - INFO - Computing fracsurvive for each mutation...
+2018-11-08 14:32:26,870 - INFO - Mutations with largest mutfracsurvive:
+site wildtype mutation  mutfracsurvive
+169        V        R            0.74
+265        L        I            0.33
+169        V        K            0.27
+422        Q        I            0.24
+376        F        P            0.23
+294        I        A            0.22
+324        G        N            0.22
+393        S        A            0.22
+384        Y        K            0.22
+ 59        K        R            0.22
+
+2018-11-08 14:32:26,871 - INFO - Writing to ./results/fracsurvive/LAIandBF520/LAI-VRC01-9ug-rep3_mutfracsurvive.csv
+2018-11-08 14:32:26,919 - INFO - Computing sitefracsurvive...
+2018-11-08 14:32:26,937 - INFO - Sites with largest avgfracsurvive:
+site  avgfracsurvive  maxfracsurvive
+169            0.11            0.74
+279            0.10            0.19
+409            0.10            0.16
+474            0.09            0.16
+372            0.09            0.14
+146            0.08            0.15
+502            0.08            0.19
+429            0.08            0.21
+294            0.08            0.22
+209            0.08            0.20
+
+2018-11-08 14:32:26,937 - INFO - Writing to ./results/fracsurvive/LAIandBF520/LAI-VRC01-9ug-rep3_sitefracsurvive.csv
+2018-11-08 14:32:26,944 - INFO - Successful completion of dms2_fracsurvive

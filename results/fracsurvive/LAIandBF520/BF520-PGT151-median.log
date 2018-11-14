@@ -1,0 +1,65 @@
+2018-11-08 16:33:32,159 - INFO - Beginning execution of dms2_logoplot in directory /fh/fast/bloom_j/computational_notebooks/adingens/2017/EnvsAntigenicAtlas
+
+2018-11-08 16:33:32,159 - INFO - Progress is being logged to ./results/fracsurvive/LAIandBF520/BF520-PGT151-median.log
+2018-11-08 16:33:32,162 - INFO - Version information:
+	Time and date: Thu Nov  8 16:33:32 2018
+	Platform: Linux-3.13.0-143-generic-x86_64-with-debian-jessie-sid
+	Python version: 3.6.5 |Anaconda, Inc.| (default, Apr 29 2018, 16:14:56)  [GCC 7.2.0]
+	dms_tools2 version: 2.3.0
+	Bio version: 1.72
+	HTSeq version: 0.11.0
+	pandas version: 0.23.4
+	numpy version: 1.15.1
+	IPython version: 6.5.0
+	jupyter version: 1.0.0
+	matplotlib version: 3.0.0
+	plotnine version: 0.5.0
+	natsort version: 5.4.1
+	pystan version: 2.16.0.0
+	scipy version: 1.1.0
+	seaborn version: 0.9.0
+	phydmslib version: 2.3.1
+	statsmodels version: 0.9.0
+	rpy2 version: 2.9.1
+	regex version: 2.4.148
+	umi_tools version unknown
+
+2018-11-08 16:33:32,162 - INFO - Parsed the following arguments:
+	outdir = ./results/fracsurvive/LAIandBF520
+	ncpus = -1
+	use_existing = yes
+	prefs = None
+	diffsel = None
+	fracsurvive = ./results/fracsurvive/LAIandBF520/summaryBF520_BF520-PGT151-medianmutfracsurvive.csv
+	diffprefs = None
+	name = BF520-PGT151-median
+	nperline = 84
+	numberevery = 10
+	excludestop = no
+	stringency = 1
+	restrictdiffsel = all
+	diffselrange = None
+	fracsurvivemax = None
+	sortsites = yes
+	mapmetric = functionalgroup
+	colormap = jet
+	overlay1 = ['./results/fracsurvive/LAIandBF520/summaryBF520_BF520-PGT151-medianmutfracsurvive.csv', 'wildtype', 'wildtype']
+	overlay2 = None
+	overlay3 = None
+	underlay = yes
+	scalebar = ['0.3', 'fraction surviving = 0.3']
+	overlaycolormap = jet
+	letterheight = 1
+	ignore_extracols = no
+	sepline = no
+
+2018-11-08 16:33:32,164 - INFO - Reading fracsurvive from file ./results/fracsurvive/LAIandBF520/summaryBF520_BF520-PGT151-medianmutfracsurvive.csv...
+2018-11-08 16:33:32,199 - INFO - Read data for 661 sites.
+
+2018-11-08 16:33:32,245 - INFO - Reading overlay for wildtype from ./results/fracsurvive/LAIandBF520/summaryBF520_BF520-PGT151-medianmutfracsurvive.csv...
+2018-11-08 16:33:32,351 - INFO - Read overlay for 661 sites.
+
+2018-11-08 16:33:32,351 - INFO - Making logo plot ./results/fracsurvive/LAIandBF520/BF520-PGT151-median_fracsurvive.pdf...
+2018-11-08 16:33:43,707 - INFO - Successfully created logo plot.
+
+2018-11-08 16:33:43,708 - INFO - Successful completion of dms2_logoplot

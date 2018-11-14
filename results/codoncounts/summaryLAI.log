@@ -1,0 +1,93 @@
+2018-11-09 09:59:57,190 - INFO - Beginning execution of dms2_batch_bcsubamp in directory /fh/fast/bloom_j/computational_notebooks/adingens/2017/EnvsAntigenicAtlas
+
+2018-11-09 09:59:57,191 - INFO - Progress is being logged to ./results/codoncounts/summaryLAI.log
+2018-11-09 09:59:57,202 - INFO - Version information:
+	Time and date: Fri Nov  9 09:59:57 2018
+	Platform: Linux-3.13.0-143-generic-x86_64-with-debian-jessie-sid
+	Python version: 3.6.5 |Anaconda, Inc.| (default, Apr 29 2018, 16:14:56)  [GCC 7.2.0]
+	dms_tools2 version: 2.3.0
+	Bio version: 1.72
+	HTSeq version: 0.11.0
+	pandas version: 0.23.4
+	numpy version: 1.15.1
+	IPython version: 6.5.0
+	jupyter version: 1.0.0
+	matplotlib version: 3.0.0
+	plotnine version: 0.5.0
+	natsort version: 5.4.1
+	pystan version: 2.16.0.0
+	scipy version: 1.1.0
+	seaborn version: 0.9.0
+	phydmslib version: 2.3.1
+	statsmodels version: 0.9.0
+	rpy2 version: 2.9.1
+	regex version: 2.4.148
+	umi_tools version unknown
+
+2018-11-09 09:59:57,202 - INFO - Parsed the following arguments:
+	outdir = ./results/codoncounts
+	ncpus = 14
+	use_existing = no
+	refseq = ./data/LAI_Env.fasta
+	alignspecs = ['90,433,39,39', '421,769,38,35', '765,1116,35,33', '1117,1425,38,35', '1424,1779,35,33', '1780,2127,38,38']
+	bclen = 8
+	fastqdir = ./results/FASTQ_files/
+	R2 = None
+	R1trim = [231]
+	R2trim = [191]
+	bclen2 = None
+	chartype = codon
+	maxmuts = 4
+	minq = 15
+	minreads = 2
+	minfraccall = 0.95
+	minconcur = 0.75
+	sitemask = None
+	purgeread = 0
+	purgebc = 0
+	bcinfo = False
+	batchfile = ./results/codoncounts/LAI_batch.csv
+	summaryprefix = summaryLAI
+
+2018-11-09 09:59:57,204 - INFO - Removing existing file ./results/codoncounts/summaryLAI_readstats.pdf
+2018-11-09 09:59:57,211 - INFO - Removing existing file ./results/codoncounts/summaryLAI_bcstats.pdf
+2018-11-09 09:59:57,216 - INFO - Removing existing file ./results/codoncounts/summaryLAI_readsperbc.pdf
+2018-11-09 09:59:57,221 - INFO - Removing existing file ./results/codoncounts/summaryLAI_depth.pdf
+2018-11-09 09:59:57,227 - INFO - Removing existing file ./results/codoncounts/summaryLAI_mutfreq.pdf
+2018-11-09 09:59:57,244 - INFO - Removing existing file ./results/codoncounts/summaryLAI_codonmuttypes.pdf
+2018-11-09 09:59:57,250 - INFO - Removing existing file ./results/codoncounts/summaryLAI_codonmuttypes.csv
+2018-11-09 09:59:57,255 - INFO - Removing existing file ./results/codoncounts/summaryLAI_codonntchanges.pdf
+2018-11-09 09:59:57,261 - INFO - Removing existing file ./results/codoncounts/summaryLAI_singlentchanges.pdf
+2018-11-09 09:59:57,265 - INFO - Removing existing file ./results/codoncounts/summaryLAI_cumulmutcounts.pdf
+2018-11-09 09:59:57,270 - INFO - Parsing sample info from ./results/codoncounts/LAI_batch.csv
+2018-11-09 09:59:57,300 - INFO - Read the following sample information:
+name,R1
+LAI-mut-virus-rep1,LAI-mut-virus-rep1_R1.fastq.gz
+LAI-mut-virus-rep1-PGT151-2ug,LAI-mut-virus-rep1-PGT151-2ug_R1.fastq.gz
+LAI-mut-virus-rep1-VRC01-14ug,LAI-mut-virus-rep1-VRC01-14ug_R1.fastq.gz
+LAI-mut-virus-rep2,LAI-mut-virus-rep2_R1.fastq.gz
+LAI-mut-virus-rep2-PGT151-2ug,LAI-mut-virus-rep2-PGT151-2ug_R1.fastq.gz
+LAI-mut-virus-rep2-VRC01-14ug,LAI-mut-virus-rep2-VRC01-14ug_R1.fastq.gz
+LAI-mut-virus-rep3,LAI-mut-virus-rep3_R1.fastq.gz
+LAI-mut-virus-rep3-PGT151-2ug,LAI-mut-virus-rep3-PGT151-2ug_R1.fastq.gz
+LAI-mut-virus-rep3-VRC01-11ug,LAI-mut-virus-rep3-VRC01-11ug_R1.fastq.gz
+LAI-mut-virus-rep3-VRC01-14ug,LAI-mut-virus-rep3-VRC01-14ug_R1.fastq.gz
+LAI-mut-virus-rep3-VRC01-9ug,LAI-mut-virus-rep3-VRC01-9ug_R1.fastq.gz
+LAI-wt-DNA-rep1,LAI-wt-DNA-rep1_R1.fastq.gz
+LAI-wt-DNA-rep2,LAI-wt-DNA-rep2_R1.fastq.gz
+LAI-wt-DNA-rep3,LAI-wt-DNA-rep3_R1.fastq.gz
+
+
+2018-11-09 09:59:57,301 - INFO - Running dms2_bcsubamp on all samples using 14 CPUs...
+2018-11-09 10:08:04,780 - INFO - Completed runs of dms2_bcsubamp.
+
+2018-11-09 10:08:04,822 - INFO - Plotting read stats to ./results/codoncounts/summaryLAI_readstats.pdf
+2018-11-09 10:08:06,023 - INFO - Plotting barcode stats to ./results/codoncounts/summaryLAI_bcstats.pdf
+2018-11-09 10:08:06,856 - INFO - Plotting reads per barcode to ./results/codoncounts/summaryLAI_readsperbc.pdf
+2018-11-09 10:08:09,677 - INFO - Plotting count depth to ./results/codoncounts/summaryLAI_depth.pdf
+2018-11-09 10:08:12,598 - INFO - Plotting mutation frequencies to ./results/codoncounts/summaryLAI_mutfreq.pdf
+2018-11-09 10:08:30,620 - INFO - Plotting average frequencies of codon mutation types to ./results/codoncounts/summaryLAI_codonmuttypes.pdf, writing the data to ./results/codoncounts/summaryLAI_codonmuttypes.csv
+2018-11-09 10:08:47,368 - INFO - Plotting average frequencies of nucleotide changes per codon mutation to ./results/codoncounts/summaryLAI_codonntchanges.pdf
+2018-11-09 10:09:02,260 - INFO - Plotting frequencies of nucleotide changes in 1-nucleotide mutations to ./results/codoncounts/summaryLAI_singlentchanges.pdf
+2018-11-09 10:09:16,092 - INFO - Plotting fraction of mutations seen less than some number of times to ./results/codoncounts/summaryLAI_cumulmutcounts.pdf
+2018-11-09 10:09:33,740 - INFO - Successful completion of dms2_batch_bcsubamp

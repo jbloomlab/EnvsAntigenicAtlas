@@ -1,0 +1,157 @@
+2018-11-07 14:19:13,381 - INFO - Beginning execution of dms2_bcsubamp in directory /fh/fast/bloom_j/computational_notebooks/adingens/2017/EnvsAntigenicAtlas
+
+2018-11-07 14:19:13,382 - INFO - Progress is being logged to ./results/codoncounts/BF520-mock-rep1.log
+2018-11-07 14:19:13,390 - INFO - Version information:
+	Time and date: Wed Nov  7 14:19:13 2018
+	Platform: Linux-3.13.0-143-generic-x86_64-with-debian-jessie-sid
+	Python version: 3.6.5 |Anaconda, Inc.| (default, Apr 29 2018, 16:14:56)  [GCC 7.2.0]
+	dms_tools2 version: 2.3.0
+	Bio version: 1.72
+	HTSeq version: 0.11.0
+	pandas version: 0.23.4
+	numpy version: 1.15.1
+	IPython version: 6.5.0
+	jupyter version: 1.0.0
+	matplotlib version: 3.0.0
+	plotnine version: 0.5.0
+	natsort version: 5.4.1
+	pystan version: 2.16.0.0
+	scipy version: 1.1.0
+	seaborn version: 0.9.0
+	phydmslib version: 2.3.1
+	statsmodels version: 0.9.0
+	rpy2 version: 2.9.1
+	regex version: 2.4.148
+	umi_tools version unknown
+
+2018-11-07 14:19:13,391 - INFO - Parsed the following arguments:
+	outdir = ./results/codoncounts
+	ncpus = -1
+	use_existing = no
+	refseq = ./data/BF520_Env.fasta
+	alignspecs = ['88,417,40,39', '418,753,39,35', '754,1092,36,39', '1093,1447,35,29', '1407,1758,35,32', '1759,2097,30,36']
+	bclen = 8
+	fastqdir = ./results/FASTQ_files/
+	R2 = None
+	R1trim = [205]
+	R2trim = [212]
+	bclen2 = None
+	chartype = codon
+	maxmuts = 4
+	minq = 15
+	minreads = 2
+	minfraccall = 0.95
+	minconcur = 0.75
+	sitemask = None
+	purgeread = 0
+	purgebc = 0
+	bcinfo = False
+	name = BF520-mock-rep1
+	R1 = ['BF520_mock-rep1_R1.fastq.gz']
+
+2018-11-07 14:19:13,394 - INFO - Removing existing file ./results/codoncounts/BF520-mock-rep1_codoncounts.csv
+2018-11-07 14:19:13,402 - INFO - Removing existing file ./results/codoncounts/BF520-mock-rep1_readstats.csv
+2018-11-07 14:19:13,425 - INFO - Removing existing file ./results/codoncounts/BF520-mock-rep1_readsperbc.csv
+2018-11-07 14:19:13,452 - INFO - Removing existing file ./results/codoncounts/BF520-mock-rep1_bcstats.csv
+2018-11-07 14:19:13,496 - INFO - Read refseq of 2559 codons from ./data/BF520_Env.fasta
+2018-11-07 14:19:13,498 - INFO - Reads are in these FASTQ pairs:
+	./results/FASTQ_files/BF520_mock-rep1_R1.fastq.gz and ./results/FASTQ_files/BF520_mock-rep1_R2.fastq.gz
+
+2018-11-07 14:19:13,498 - INFO - Now parsing read pairs...
+2018-11-07 14:19:27,387 - INFO - Reads parsed so far: 500000
+2018-11-07 14:19:40,271 - INFO - Reads parsed so far: 1000000
+2018-11-07 14:19:53,678 - INFO - Reads parsed so far: 1500000
+2018-11-07 14:20:07,305 - INFO - Reads parsed so far: 2000000
+2018-11-07 14:20:19,637 - INFO - Reads parsed so far: 2500000
+2018-11-07 14:20:33,784 - INFO - Reads parsed so far: 3000000
+2018-11-07 14:20:47,363 - INFO - Reads parsed so far: 3500000
+2018-11-07 14:20:59,826 - INFO - Reads parsed so far: 4000000
+2018-11-07 14:21:13,352 - INFO - Reads parsed so far: 4500000
+2018-11-07 14:21:25,803 - INFO - Reads parsed so far: 5000000
+2018-11-07 14:21:38,888 - INFO - Reads parsed so far: 5500000
+2018-11-07 14:21:51,160 - INFO - Reads parsed so far: 6000000
+2018-11-07 14:22:03,620 - INFO - Reads parsed so far: 6500000
+2018-11-07 14:22:20,827 - INFO - Reads parsed so far: 7000000
+2018-11-07 14:22:34,298 - INFO - Reads parsed so far: 7500000
+2018-11-07 14:22:47,827 - INFO - Reads parsed so far: 8000000
+2018-11-07 14:23:01,321 - INFO - Reads parsed so far: 8500000
+2018-11-07 14:23:14,723 - INFO - Reads parsed so far: 9000000
+2018-11-07 14:23:27,763 - INFO - Reads parsed so far: 9500000
+2018-11-07 14:23:40,654 - INFO - Reads parsed so far: 10000000
+2018-11-07 14:23:53,350 - INFO - Reads parsed so far: 10500000
+2018-11-07 14:24:10,937 - INFO - Reads parsed so far: 11000000
+2018-11-07 14:24:23,259 - INFO - Reads parsed so far: 11500000
+2018-11-07 14:24:29,982 - INFO - Parsed 11779457 reads, found 1855891 unique barcodes.
+2018-11-07 14:24:29,991 - INFO - Summary stats on reads:
+total  fail filter  low Q barcode
+11779457            0         796729
+2018-11-07 14:24:29,991 - INFO - Writing these stats to ./results/codoncounts/BF520-mock-rep1_readstats.csv
+
+2018-11-07 14:24:30,767 - INFO - Number of reads per barcode:
+                 number of barcodes
+number of reads                    
+1                            576081
+2                            152821
+3                            115550
+4                             97394
+5                             86572
+6                             84848
+7                             86789
+8                             89770
+9                             89420
+10                            86561
+11                            79652
+12                            70876
+13                            59488
+14                            49042
+15                            38413
+16                            28993
+17                            21201
+18                            14738
+19                             9921
+20                             6624
+21                             4139
+22                             2641
+23                             1695
+24                              966
+25                              552
+26                              366
+27                              228
+28                              161
+29                              112
+30                               84
+31                               57
+32                               43
+33                               25
+34                               23
+35                               16
+36                                7
+37                                3
+38                                6
+39                                4
+40                                1
+41                                3
+42                                1
+43                                1
+45                                2
+46                                1
+2018-11-07 14:24:30,767 - INFO - Writing these stats to ./results/codoncounts/BF520-mock-rep1_readsperbc.csv
+
+2018-11-07 14:24:30,772 - INFO - Examining the 1855891 barcodes to build and align subamplicons...
+2018-11-07 14:24:50,305 - INFO - Barcodes examined so far: 200000
+2018-11-07 14:25:09,602 - INFO - Barcodes examined so far: 400000
+2018-11-07 14:25:29,890 - INFO - Barcodes examined so far: 600000
+2018-11-07 14:25:46,505 - INFO - Barcodes examined so far: 800000
+2018-11-07 14:26:00,202 - INFO - Barcodes examined so far: 1000000
+2018-11-07 14:26:08,253 - INFO - Barcodes examined so far: 1200000
+2018-11-07 14:26:10,406 - INFO - Barcodes examined so far: 1400000
+2018-11-07 14:26:19,396 - INFO - Barcodes examined so far: 1600000
+2018-11-07 14:26:30,775 - INFO - Barcodes examined so far: 1800000
+2018-11-07 14:26:31,926 - INFO - Examined all barcodes. Summary stats:
+total  too few reads  not alignable  aligned
+1855891         576081         116621  1163189
+2018-11-07 14:26:31,926 - INFO - Writing these stats to ./results/codoncounts/BF520-mock-rep1_bcstats.csv
+
+2018-11-07 14:26:31,951 - INFO - Writing the counts of each codon identity at each site to ./results/codoncounts/BF520-mock-rep1_codoncounts.csv
+
+2018-11-07 14:26:32,010 - INFO - Successful completion of dms2_bcsubamp

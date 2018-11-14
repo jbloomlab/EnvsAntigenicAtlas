@@ -1,0 +1,14 @@
+name,R1
+BF520-wtvirus-rep1,BF520_wtvirus-rep1_R1.fastq.gz
+BF520-mutDNA-rep3,BF520_mutDNA-rep3_R1.fastq.gz
+BF520-wtvirus-rep3,BF520_wtvirus-rep3_R1.fastq.gz
+BF520-mock-rep2,BF520_mock-rep2_R1.fastq.gz
+BF520-PGT151-rep2,BF520_PGT151-rep2_R1.fastq.gz
+BF520-mock-rep1,BF520_mock-rep1_R1.fastq.gz
+BF520-mutDNA-rep2,BF520_mutDNA-rep2_R1.fastq.gz
+BF520-PGT151-rep1,BF520_PGT151-rep1_R1.fastq.gz
+BF520-wtDNA,BF520_wtDNA_R1.fastq.gz
+BF520-mock-rep3,BF520_mock-rep3_R1.fastq.gz
+BF520-PGT151-rep3,BF520_PGT151-rep3_R1.fastq.gz
+BF520-wtvirus-rep2,BF520_wtvirus-rep2_R1.fastq.gz
+BF520-mutDNA-rep1,BF520_mutDNA-rep1_R1.fastq.gz

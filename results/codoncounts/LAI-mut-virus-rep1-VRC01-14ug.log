@@ -1,0 +1,97 @@
+2018-11-09 10:00:05,017 - INFO - Beginning execution of dms2_bcsubamp in directory /fh/fast/bloom_j/computational_notebooks/adingens/2017/EnvsAntigenicAtlas
+
+2018-11-09 10:00:05,017 - INFO - Progress is being logged to ./results/codoncounts/LAI-mut-virus-rep1-VRC01-14ug.log
+2018-11-09 10:00:05,038 - INFO - Version information:
+	Time and date: Fri Nov  9 10:00:05 2018
+	Platform: Linux-3.13.0-143-generic-x86_64-with-debian-jessie-sid
+	Python version: 3.6.5 |Anaconda, Inc.| (default, Apr 29 2018, 16:14:56)  [GCC 7.2.0]
+	dms_tools2 version: 2.3.0
+	Bio version: 1.72
+	HTSeq version: 0.11.0
+	pandas version: 0.23.4
+	numpy version: 1.15.1
+	IPython version: 6.5.0
+	jupyter version: 1.0.0
+	matplotlib version: 3.0.0
+	plotnine version: 0.5.0
+	natsort version: 5.4.1
+	pystan version: 2.16.0.0
+	scipy version: 1.1.0
+	seaborn version: 0.9.0
+	phydmslib version: 2.3.1
+	statsmodels version: 0.9.0
+	rpy2 version: 2.9.1
+	regex version: 2.4.148
+	umi_tools version unknown
+
+2018-11-09 10:00:05,038 - INFO - Parsed the following arguments:
+	outdir = ./results/codoncounts
+	ncpus = -1
+	use_existing = no
+	refseq = ./data/LAI_Env.fasta
+	alignspecs = ['90,433,39,39', '421,769,38,35', '765,1116,35,33', '1117,1425,38,35', '1424,1779,35,33', '1780,2127,38,38']
+	bclen = 8
+	fastqdir = ./results/FASTQ_files/
+	R2 = None
+	R1trim = [231]
+	R2trim = [191]
+	bclen2 = None
+	chartype = codon
+	maxmuts = 4
+	minq = 15
+	minreads = 2
+	minfraccall = 0.95
+	minconcur = 0.75
+	sitemask = None
+	purgeread = 0
+	purgebc = 0
+	bcinfo = False
+	name = LAI-mut-virus-rep1-VRC01-14ug
+	R1 = ['LAI-mut-virus-rep1-VRC01-14ug_R1.fastq.gz']
+
+2018-11-09 10:00:05,045 - INFO - Removing existing file ./results/codoncounts/LAI-mut-virus-rep1-VRC01-14ug_codoncounts.csv
+2018-11-09 10:00:05,062 - INFO - Removing existing file ./results/codoncounts/LAI-mut-virus-rep1-VRC01-14ug_readstats.csv
+2018-11-09 10:00:05,071 - INFO - Removing existing file ./results/codoncounts/LAI-mut-virus-rep1-VRC01-14ug_readsperbc.csv
+2018-11-09 10:00:05,077 - INFO - Removing existing file ./results/codoncounts/LAI-mut-virus-rep1-VRC01-14ug_bcstats.csv
+2018-11-09 10:00:05,106 - INFO - Read refseq of 2127 codons from ./data/LAI_Env.fasta
+2018-11-09 10:00:05,110 - INFO - Reads are in these FASTQ pairs:
+	./results/FASTQ_files/LAI-mut-virus-rep1-VRC01-14ug_R1.fastq.gz and ./results/FASTQ_files/LAI-mut-virus-rep1-VRC01-14ug_R2.fastq.gz
+
+2018-11-09 10:00:05,110 - INFO - Now parsing read pairs...
+2018-11-09 10:00:19,228 - INFO - Reads parsed so far: 500000
+2018-11-09 10:00:33,701 - INFO - Reads parsed so far: 1000000
+2018-11-09 10:00:48,092 - INFO - Reads parsed so far: 1500000
+2018-11-09 10:00:55,676 - INFO - Parsed 1787022 reads, found 958829 unique barcodes.
+2018-11-09 10:00:55,686 - INFO - Summary stats on reads:
+total  fail filter  low Q barcode
+1787022            0         264142
+2018-11-09 10:00:55,686 - INFO - Writing these stats to ./results/codoncounts/LAI-mut-virus-rep1-VRC01-14ug_readstats.csv
+
+2018-11-09 10:00:55,999 - INFO - Number of reads per barcode:
+                 number of barcodes
+number of reads                    
+1                            574576
+2                            252670
+3                             94525
+4                             28155
+5                              7088
+6                              1454
+7                               292
+8                                61
+9                                 7
+10                                1
+2018-11-09 10:00:55,999 - INFO - Writing these stats to ./results/codoncounts/LAI-mut-virus-rep1-VRC01-14ug_readsperbc.csv
+
+2018-11-09 10:00:56,004 - INFO - Examining the 958829 barcodes to build and align subamplicons...
+2018-11-09 10:01:04,739 - INFO - Barcodes examined so far: 200000
+2018-11-09 10:01:12,746 - INFO - Barcodes examined so far: 400000
+2018-11-09 10:01:19,351 - INFO - Barcodes examined so far: 600000
+2018-11-09 10:01:23,370 - INFO - Barcodes examined so far: 800000
+2018-11-09 10:01:24,717 - INFO - Examined all barcodes. Summary stats:
+total  too few reads  not alignable  aligned
+958829         574576          60347   323906
+2018-11-09 10:01:24,717 - INFO - Writing these stats to ./results/codoncounts/LAI-mut-virus-rep1-VRC01-14ug_bcstats.csv
+
+2018-11-09 10:01:24,747 - INFO - Writing the counts of each codon identity at each site to ./results/codoncounts/LAI-mut-virus-rep1-VRC01-14ug_codoncounts.csv
+
+2018-11-09 10:01:24,802 - INFO - Successful completion of dms2_bcsubamp

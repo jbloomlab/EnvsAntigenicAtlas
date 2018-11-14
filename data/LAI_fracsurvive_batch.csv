@@ -1,0 +1,9 @@
+group,name,sel,mock,err,virus,antibody,virus-antibody,libfracsurvive
+LAI-PGT151,2ug-rep1,LAI-mut-virus-rep1-PGT151-2ug,LAI-mut-virus-rep1,LAI-wt-DNA-rep1,LAI,PGT151,LAI-PGT151,0.039070999999999995
+LAI-PGT151,2ug-rep3,LAI-mut-virus-rep3-PGT151-2ug,LAI-mut-virus-rep3,LAI-wt-DNA-rep3,LAI,PGT151,LAI-PGT151,0.014522
+LAI-PGT151,2ug-rep2,LAI-mut-virus-rep2-PGT151-2ug,LAI-mut-virus-rep2,LAI-wt-DNA-rep2,LAI,PGT151,LAI-PGT151,0.021078
+LAI-VRC01,14ug-rep2,LAI-mut-virus-rep2-VRC01-14ug,LAI-mut-virus-rep2,LAI-wt-DNA-rep2,LAI,VRC01,LAI-VRC01,0.033175
+LAI-VRC01,9ug-rep3,LAI-mut-virus-rep3-VRC01-9ug,LAI-mut-virus-rep3,LAI-wt-DNA-rep3,LAI,VRC01,LAI-VRC01,0.067211
+LAI-VRC01,11ug-rep3,LAI-mut-virus-rep3-VRC01-11ug,LAI-mut-virus-rep3,LAI-wt-DNA-rep3,LAI,VRC01,LAI-VRC01,0.061111
+LAI-VRC01,14ug-rep1,LAI-mut-virus-rep1-VRC01-14ug,LAI-mut-virus-rep1,LAI-wt-DNA-rep1,LAI,VRC01,LAI-VRC01,0.090284
+LAI-VRC01,14ug-rep3,LAI-mut-virus-rep3-VRC01-14ug,LAI-mut-virus-rep3,LAI-wt-DNA-rep3,LAI,VRC01,LAI-VRC01,0.021006999999999998

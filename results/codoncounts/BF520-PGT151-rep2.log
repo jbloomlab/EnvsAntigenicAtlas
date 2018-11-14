@@ -1,0 +1,186 @@
+2018-11-07 14:19:12,829 - INFO - Beginning execution of dms2_bcsubamp in directory /fh/fast/bloom_j/computational_notebooks/adingens/2017/EnvsAntigenicAtlas
+
+2018-11-07 14:19:12,829 - INFO - Progress is being logged to ./results/codoncounts/BF520-PGT151-rep2.log
+2018-11-07 14:19:12,835 - INFO - Version information:
+	Time and date: Wed Nov  7 14:19:12 2018
+	Platform: Linux-3.13.0-143-generic-x86_64-with-debian-jessie-sid
+	Python version: 3.6.5 |Anaconda, Inc.| (default, Apr 29 2018, 16:14:56)  [GCC 7.2.0]
+	dms_tools2 version: 2.3.0
+	Bio version: 1.72
+	HTSeq version: 0.11.0
+	pandas version: 0.23.4
+	numpy version: 1.15.1
+	IPython version: 6.5.0
+	jupyter version: 1.0.0
+	matplotlib version: 3.0.0
+	plotnine version: 0.5.0
+	natsort version: 5.4.1
+	pystan version: 2.16.0.0
+	scipy version: 1.1.0
+	seaborn version: 0.9.0
+	phydmslib version: 2.3.1
+	statsmodels version: 0.9.0
+	rpy2 version: 2.9.1
+	regex version: 2.4.148
+	umi_tools version unknown
+
+2018-11-07 14:19:12,835 - INFO - Parsed the following arguments:
+	outdir = ./results/codoncounts
+	ncpus = -1
+	use_existing = no
+	refseq = ./data/BF520_Env.fasta
+	alignspecs = ['88,417,40,39', '418,753,39,35', '754,1092,36,39', '1093,1447,35,29', '1407,1758,35,32', '1759,2097,30,36']
+	bclen = 8
+	fastqdir = ./results/FASTQ_files/
+	R2 = None
+	R1trim = [205]
+	R2trim = [212]
+	bclen2 = None
+	chartype = codon
+	maxmuts = 4
+	minq = 15
+	minreads = 2
+	minfraccall = 0.95
+	minconcur = 0.75
+	sitemask = None
+	purgeread = 0
+	purgebc = 0
+	bcinfo = False
+	name = BF520-PGT151-rep2
+	R1 = ['BF520_PGT151-rep2_R1.fastq.gz']
+
+2018-11-07 14:19:12,837 - INFO - Removing existing file ./results/codoncounts/BF520-PGT151-rep2_codoncounts.csv
+2018-11-07 14:19:12,843 - INFO - Removing existing file ./results/codoncounts/BF520-PGT151-rep2_readstats.csv
+2018-11-07 14:19:12,848 - INFO - Removing existing file ./results/codoncounts/BF520-PGT151-rep2_readsperbc.csv
+2018-11-07 14:19:12,853 - INFO - Removing existing file ./results/codoncounts/BF520-PGT151-rep2_bcstats.csv
+2018-11-07 14:19:12,881 - INFO - Read refseq of 2559 codons from ./data/BF520_Env.fasta
+2018-11-07 14:19:12,881 - INFO - Reads are in these FASTQ pairs:
+	./results/FASTQ_files/BF520_PGT151-rep2_R1.fastq.gz and ./results/FASTQ_files/BF520_PGT151-rep2_R2.fastq.gz
+
+2018-11-07 14:19:12,882 - INFO - Now parsing read pairs...
+2018-11-07 14:19:28,406 - INFO - Reads parsed so far: 500000
+2018-11-07 14:19:41,501 - INFO - Reads parsed so far: 1000000
+2018-11-07 14:19:55,075 - INFO - Reads parsed so far: 1500000
+2018-11-07 14:20:09,089 - INFO - Reads parsed so far: 2000000
+2018-11-07 14:20:23,144 - INFO - Reads parsed so far: 2500000
+2018-11-07 14:20:36,835 - INFO - Reads parsed so far: 3000000
+2018-11-07 14:20:51,859 - INFO - Reads parsed so far: 3500000
+2018-11-07 14:21:06,215 - INFO - Reads parsed so far: 4000000
+2018-11-07 14:21:19,873 - INFO - Reads parsed so far: 4500000
+2018-11-07 14:21:34,584 - INFO - Reads parsed so far: 5000000
+2018-11-07 14:21:47,751 - INFO - Reads parsed so far: 5500000
+2018-11-07 14:22:01,016 - INFO - Reads parsed so far: 6000000
+2018-11-07 14:22:14,776 - INFO - Reads parsed so far: 6500000
+2018-11-07 14:22:23,024 - INFO - Parsed 6804603 reads, found 2457832 unique barcodes.
+2018-11-07 14:22:23,037 - INFO - Summary stats on reads:
+total  fail filter  low Q barcode
+6804603            0         664912
+2018-11-07 14:22:23,037 - INFO - Writing these stats to ./results/codoncounts/BF520-PGT151-rep2_readstats.csv
+
+2018-11-07 14:22:24,297 - INFO - Number of reads per barcode:
+                 number of barcodes
+number of reads                    
+1                           1064738
+2                            534826
+3                            376007
+4                            229735
+5                            123753
+6                             60541
+7                             27331
+8                             11798
+9                              5035
+10                             2193
+11                              936
+12                              443
+13                              296
+14                              254
+15                              244
+16                              258
+17                              305
+18                              354
+19                              415
+20                              468
+21                              556
+22                              561
+23                              742
+24                              746
+25                              879
+26                              962
+27                              995
+28                             1044
+29                             1124
+30                             1144
+31                             1105
+32                             1044
+33                             1010
+34                              904
+35                              820
+36                              703
+37                              596
+38                              528
+39                              512
+40                              407
+41                              295
+42                              246
+43                              194
+44                              166
+45                              111
+46                               84
+47                               56
+48                               55
+49                               30
+50                               19
+51                               21
+52                               22
+53                               17
+54                               16
+55                                8
+56                               15
+57                                6
+58                                7
+59                               11
+60                               16
+61                                4
+62                                9
+63                               13
+64                               20
+65                               13
+66                                5
+67                               10
+68                                7
+69                                6
+70                                7
+71                                4
+72                                5
+73                                5
+74                                2
+75                                4
+76                                4
+77                                2
+78                                2
+79                                1
+81                                1
+90                                1
+2018-11-07 14:22:24,297 - INFO - Writing these stats to ./results/codoncounts/BF520-PGT151-rep2_readsperbc.csv
+
+2018-11-07 14:22:24,304 - INFO - Examining the 2457832 barcodes to build and align subamplicons...
+2018-11-07 14:22:37,845 - INFO - Barcodes examined so far: 200000
+2018-11-07 14:22:50,627 - INFO - Barcodes examined so far: 400000
+2018-11-07 14:23:01,978 - INFO - Barcodes examined so far: 600000
+2018-11-07 14:23:12,967 - INFO - Barcodes examined so far: 800000
+2018-11-07 14:23:23,333 - INFO - Barcodes examined so far: 1000000
+2018-11-07 14:23:32,836 - INFO - Barcodes examined so far: 1200000
+2018-11-07 14:23:40,947 - INFO - Barcodes examined so far: 1400000
+2018-11-07 14:23:47,279 - INFO - Barcodes examined so far: 1600000
+2018-11-07 14:23:52,048 - INFO - Barcodes examined so far: 1800000
+2018-11-07 14:23:54,311 - INFO - Barcodes examined so far: 2000000
+2018-11-07 14:24:06,937 - INFO - Barcodes examined so far: 2200000
+2018-11-07 14:24:12,761 - INFO - Barcodes examined so far: 2400000
+2018-11-07 14:24:13,018 - INFO - Examined all barcodes. Summary stats:
+total  too few reads  not alignable  aligned
+2457832        1064738         347180  1045914
+2018-11-07 14:24:13,018 - INFO - Writing these stats to ./results/codoncounts/BF520-PGT151-rep2_bcstats.csv
+
+2018-11-07 14:24:13,039 - INFO - Writing the counts of each codon identity at each site to ./results/codoncounts/BF520-PGT151-rep2_codoncounts.csv
+
+2018-11-07 14:24:13,092 - INFO - Successful completion of dms2_bcsubamp

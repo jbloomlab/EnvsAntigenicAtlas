@@ -1,0 +1,92 @@
+2018-11-07 14:19:06,090 - INFO - Beginning execution of dms2_batch_bcsubamp in directory /fh/fast/bloom_j/computational_notebooks/adingens/2017/EnvsAntigenicAtlas
+
+2018-11-07 14:19:06,090 - INFO - Progress is being logged to ./results/codoncounts/summaryBF520.log
+2018-11-07 14:19:06,100 - INFO - Version information:
+	Time and date: Wed Nov  7 14:19:06 2018
+	Platform: Linux-3.13.0-143-generic-x86_64-with-debian-jessie-sid
+	Python version: 3.6.5 |Anaconda, Inc.| (default, Apr 29 2018, 16:14:56)  [GCC 7.2.0]
+	dms_tools2 version: 2.3.0
+	Bio version: 1.72
+	HTSeq version: 0.11.0
+	pandas version: 0.23.4
+	numpy version: 1.15.1
+	IPython version: 6.5.0
+	jupyter version: 1.0.0
+	matplotlib version: 3.0.0
+	plotnine version: 0.5.0
+	natsort version: 5.4.1
+	pystan version: 2.16.0.0
+	scipy version: 1.1.0
+	seaborn version: 0.9.0
+	phydmslib version: 2.3.1
+	statsmodels version: 0.9.0
+	rpy2 version: 2.9.1
+	regex version: 2.4.148
+	umi_tools version unknown
+
+2018-11-07 14:19:06,100 - INFO - Parsed the following arguments:
+	outdir = ./results/codoncounts
+	ncpus = 14
+	use_existing = no
+	refseq = ./data/BF520_Env.fasta
+	alignspecs = ['88,417,40,39', '418,753,39,35', '754,1092,36,39', '1093,1447,35,29', '1407,1758,35,32', '1759,2097,30,36']
+	bclen = 8
+	fastqdir = ./results/FASTQ_files/
+	R2 = None
+	R1trim = [205]
+	R2trim = [212]
+	bclen2 = None
+	chartype = codon
+	maxmuts = 4
+	minq = 15
+	minreads = 2
+	minfraccall = 0.95
+	minconcur = 0.75
+	sitemask = None
+	purgeread = 0
+	purgebc = 0
+	bcinfo = False
+	batchfile = ./results/codoncounts/BF520_batch.csv
+	summaryprefix = summaryBF520
+
+2018-11-07 14:19:06,102 - INFO - Removing existing file ./results/codoncounts/summaryBF520_readstats.pdf
+2018-11-07 14:19:06,121 - INFO - Removing existing file ./results/codoncounts/summaryBF520_bcstats.pdf
+2018-11-07 14:19:06,126 - INFO - Removing existing file ./results/codoncounts/summaryBF520_readsperbc.pdf
+2018-11-07 14:19:06,131 - INFO - Removing existing file ./results/codoncounts/summaryBF520_depth.pdf
+2018-11-07 14:19:06,137 - INFO - Removing existing file ./results/codoncounts/summaryBF520_mutfreq.pdf
+2018-11-07 14:19:06,142 - INFO - Removing existing file ./results/codoncounts/summaryBF520_codonmuttypes.pdf
+2018-11-07 14:19:06,148 - INFO - Removing existing file ./results/codoncounts/summaryBF520_codonmuttypes.csv
+2018-11-07 14:19:06,153 - INFO - Removing existing file ./results/codoncounts/summaryBF520_codonntchanges.pdf
+2018-11-07 14:19:06,158 - INFO - Removing existing file ./results/codoncounts/summaryBF520_singlentchanges.pdf
+2018-11-07 14:19:06,163 - INFO - Removing existing file ./results/codoncounts/summaryBF520_cumulmutcounts.pdf
+2018-11-07 14:19:06,168 - INFO - Parsing sample info from ./results/codoncounts/BF520_batch.csv
+2018-11-07 14:19:06,200 - INFO - Read the following sample information:
+name,R1
+BF520-wtvirus-rep1,BF520_wtvirus-rep1_R1.fastq.gz
+BF520-mutDNA-rep3,BF520_mutDNA-rep3_R1.fastq.gz
+BF520-wtvirus-rep3,BF520_wtvirus-rep3_R1.fastq.gz
+BF520-mock-rep2,BF520_mock-rep2_R1.fastq.gz
+BF520-PGT151-rep2,BF520_PGT151-rep2_R1.fastq.gz
+BF520-mock-rep1,BF520_mock-rep1_R1.fastq.gz
+BF520-mutDNA-rep2,BF520_mutDNA-rep2_R1.fastq.gz
+BF520-PGT151-rep1,BF520_PGT151-rep1_R1.fastq.gz
+BF520-wtDNA,BF520_wtDNA_R1.fastq.gz
+BF520-mock-rep3,BF520_mock-rep3_R1.fastq.gz
+BF520-PGT151-rep3,BF520_PGT151-rep3_R1.fastq.gz
+BF520-wtvirus-rep2,BF520_wtvirus-rep2_R1.fastq.gz
+BF520-mutDNA-rep1,BF520_mutDNA-rep1_R1.fastq.gz
+
+
+2018-11-07 14:19:06,200 - INFO - Running dms2_bcsubamp on all samples using 14 CPUs...
+2018-11-07 14:30:10,766 - INFO - Completed runs of dms2_bcsubamp.
+
+2018-11-07 14:30:10,824 - INFO - Plotting read stats to ./results/codoncounts/summaryBF520_readstats.pdf
+2018-11-07 14:30:11,968 - INFO - Plotting barcode stats to ./results/codoncounts/summaryBF520_bcstats.pdf
+2018-11-07 14:30:12,686 - INFO - Plotting reads per barcode to ./results/codoncounts/summaryBF520_readsperbc.pdf
+2018-11-07 14:30:15,480 - INFO - Plotting count depth to ./results/codoncounts/summaryBF520_depth.pdf
+2018-11-07 14:30:18,074 - INFO - Plotting mutation frequencies to ./results/codoncounts/summaryBF520_mutfreq.pdf
+2018-11-07 14:30:33,149 - INFO - Plotting average frequencies of codon mutation types to ./results/codoncounts/summaryBF520_codonmuttypes.pdf, writing the data to ./results/codoncounts/summaryBF520_codonmuttypes.csv
+2018-11-07 14:30:46,938 - INFO - Plotting average frequencies of nucleotide changes per codon mutation to ./results/codoncounts/summaryBF520_codonntchanges.pdf
+2018-11-07 14:31:01,543 - INFO - Plotting frequencies of nucleotide changes in 1-nucleotide mutations to ./results/codoncounts/summaryBF520_singlentchanges.pdf
+2018-11-07 14:31:15,027 - INFO - Plotting fraction of mutations seen less than some number of times to ./results/codoncounts/summaryBF520_cumulmutcounts.pdf
+2018-11-07 14:31:28,655 - INFO - Successful completion of dms2_batch_bcsubamp

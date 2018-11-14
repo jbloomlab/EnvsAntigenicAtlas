@@ -1,0 +1,67 @@
+# this script loads the 5FUU JRFL-PGT151 structure and colors it according fraction surviving for each antibody, then takes pictures. 
+# Imports
+import pymol
+from pymol import cmd
+
+
+#######
+#I'd like to show the surface of the PGT151 Fab alone. Thus, we must make these their own molecule. 
+#now, we remove PGT151, then add them back in, such that we can show surface independently 
+cmd.reinitialize()
+cmd.delete('all')
+structure2 = '5FUU'
+cmd.fetch(structure2) #, type='pdb')
+cmd.remove(structure2 +' and c;A,C,E,B,D,F')
+cmd.save("5FUU_FabsOnly.pdb")
+#######
+
+
+
+# Fetch structure
+cmd.reinitialize()
+cmd.delete('all')
+structure = '5FUU'
+cmd.fetch(structure) #, type='pdb')
+
+# Remove non-Env chains
+# gp160 = chain A, C, E, B, D, F
+# PGT151 = chain H, M, L, N
+
+
+#######
+#now, remove the Fabs, and laod the Fab only molecules we generated above.
+cmd.remove('c;H,M,L,N')
+#anotate just the Env 
+cmd.select('cheE', 'c;E')
+cmd.select('sites_of_interest', 'cheE' + ' and resi 82+84+224+229+242+244+245+246+602+603')
+#site521 of FP is on other chain
+cmd.select('cheF', 'c;F')
+cmd.select('sites_of_interest2', 'cheF' + ' and resi 521') #+602+603
+
+
+cmd.load("5FUU_FabsOnly.pdb")
+cmd.select('PGT151', 'c;H,M,L,N')
+#######
+
+
+
+# Generate symmetry partners based on crystal structure
+#cmd.symexp(structure, structure, structure, 3)
+
+# Tweak initial display and color of Env monomers
+cmd.hide('everything')
+cmd.bg_color('white')
+cmd.show('cartoon')
+#cmd.hide('surface')
+cmd.color('white')
+#cmd.hide('surface', structure)
+cmd.color('white', structure)
+
+cmd.show('spheres', 'sites_of_interest')
+cmd.show('spheres', 'sites_of_interest2')
+#cmd.set('cartoon_transparency', '0.5')
+#cmd.set('cartoon_transparency', '0', structure)
+#cmd.set('transparency', '.7', structure)
+
+#cmd.set('depth', "off")
+cmd.set('specular', "off")

@@ -1,0 +1,166 @@
+2018-11-07 14:19:13,389 - INFO - Beginning execution of dms2_bcsubamp in directory /fh/fast/bloom_j/computational_notebooks/adingens/2017/EnvsAntigenicAtlas
+
+2018-11-07 14:19:13,390 - INFO - Progress is being logged to ./results/codoncounts/BF520-mutDNA-rep2.log
+2018-11-07 14:19:13,395 - INFO - Version information:
+	Time and date: Wed Nov  7 14:19:13 2018
+	Platform: Linux-3.13.0-143-generic-x86_64-with-debian-jessie-sid
+	Python version: 3.6.5 |Anaconda, Inc.| (default, Apr 29 2018, 16:14:56)  [GCC 7.2.0]
+	dms_tools2 version: 2.3.0
+	Bio version: 1.72
+	HTSeq version: 0.11.0
+	pandas version: 0.23.4
+	numpy version: 1.15.1
+	IPython version: 6.5.0
+	jupyter version: 1.0.0
+	matplotlib version: 3.0.0
+	plotnine version: 0.5.0
+	natsort version: 5.4.1
+	pystan version: 2.16.0.0
+	scipy version: 1.1.0
+	seaborn version: 0.9.0
+	phydmslib version: 2.3.1
+	statsmodels version: 0.9.0
+	rpy2 version: 2.9.1
+	regex version: 2.4.148
+	umi_tools version unknown
+
+2018-11-07 14:19:13,395 - INFO - Parsed the following arguments:
+	outdir = ./results/codoncounts
+	ncpus = -1
+	use_existing = no
+	refseq = ./data/BF520_Env.fasta
+	alignspecs = ['88,417,40,39', '418,753,39,35', '754,1092,36,39', '1093,1447,35,29', '1407,1758,35,32', '1759,2097,30,36']
+	bclen = 8
+	fastqdir = ./results/FASTQ_files/
+	R2 = None
+	R1trim = [205]
+	R2trim = [212]
+	bclen2 = None
+	chartype = codon
+	maxmuts = 4
+	minq = 15
+	minreads = 2
+	minfraccall = 0.95
+	minconcur = 0.75
+	sitemask = None
+	purgeread = 0
+	purgebc = 0
+	bcinfo = False
+	name = BF520-mutDNA-rep2
+	R1 = ['BF520_mutDNA-rep2_R1.fastq.gz']
+
+2018-11-07 14:19:13,399 - INFO - Removing existing file ./results/codoncounts/BF520-mutDNA-rep2_codoncounts.csv
+2018-11-07 14:19:13,411 - INFO - Removing existing file ./results/codoncounts/BF520-mutDNA-rep2_readstats.csv
+2018-11-07 14:19:13,438 - INFO - Removing existing file ./results/codoncounts/BF520-mutDNA-rep2_readsperbc.csv
+2018-11-07 14:19:13,456 - INFO - Removing existing file ./results/codoncounts/BF520-mutDNA-rep2_bcstats.csv
+2018-11-07 14:19:13,499 - INFO - Read refseq of 2559 codons from ./data/BF520_Env.fasta
+2018-11-07 14:19:13,500 - INFO - Reads are in these FASTQ pairs:
+	./results/FASTQ_files/BF520_mutDNA-rep2_R1.fastq.gz and ./results/FASTQ_files/BF520_mutDNA-rep2_R2.fastq.gz
+
+2018-11-07 14:19:13,500 - INFO - Now parsing read pairs...
+2018-11-07 14:19:27,269 - INFO - Reads parsed so far: 500000
+2018-11-07 14:19:40,368 - INFO - Reads parsed so far: 1000000
+2018-11-07 14:19:53,045 - INFO - Reads parsed so far: 1500000
+2018-11-07 14:20:07,145 - INFO - Reads parsed so far: 2000000
+2018-11-07 14:20:20,652 - INFO - Reads parsed so far: 2500000
+2018-11-07 14:20:34,384 - INFO - Reads parsed so far: 3000000
+2018-11-07 14:20:47,508 - INFO - Reads parsed so far: 3500000
+2018-11-07 14:21:02,732 - INFO - Reads parsed so far: 4000000
+2018-11-07 14:21:16,352 - INFO - Reads parsed so far: 4500000
+2018-11-07 14:21:31,504 - INFO - Reads parsed so far: 5000000
+2018-11-07 14:21:44,401 - INFO - Reads parsed so far: 5500000
+2018-11-07 14:21:57,285 - INFO - Reads parsed so far: 6000000
+2018-11-07 14:22:11,263 - INFO - Reads parsed so far: 6500000
+2018-11-07 14:22:28,509 - INFO - Reads parsed so far: 7000000
+2018-11-07 14:22:41,672 - INFO - Reads parsed so far: 7500000
+2018-11-07 14:22:55,176 - INFO - Reads parsed so far: 8000000
+2018-11-07 14:23:08,017 - INFO - Reads parsed so far: 8500000
+2018-11-07 14:23:21,343 - INFO - Reads parsed so far: 9000000
+2018-11-07 14:23:39,292 - INFO - Reads parsed so far: 9500000
+2018-11-07 14:23:52,695 - INFO - Reads parsed so far: 10000000
+2018-11-07 14:24:05,497 - INFO - Reads parsed so far: 10500000
+2018-11-07 14:24:20,027 - INFO - Reads parsed so far: 11000000
+2018-11-07 14:24:32,767 - INFO - Reads parsed so far: 11500000
+2018-11-07 14:24:45,334 - INFO - Reads parsed so far: 12000000
+2018-11-07 14:24:57,842 - INFO - Reads parsed so far: 12500000
+2018-11-07 14:25:10,490 - INFO - Reads parsed so far: 13000000
+2018-11-07 14:25:22,935 - INFO - Reads parsed so far: 13500000
+2018-11-07 14:25:42,149 - INFO - Reads parsed so far: 14000000
+2018-11-07 14:25:54,818 - INFO - Reads parsed so far: 14500000
+2018-11-07 14:25:58,038 - INFO - Parsed 14626337 reads, found 6639970 unique barcodes.
+2018-11-07 14:25:58,042 - INFO - Summary stats on reads:
+total  fail filter  low Q barcode
+14626337            0        1196256
+2018-11-07 14:25:58,042 - INFO - Writing these stats to ./results/codoncounts/BF520-mutDNA-rep2_readstats.csv
+
+2018-11-07 14:26:00,353 - INFO - Number of reads per barcode:
+                 number of barcodes
+number of reads                    
+1                           3666836
+2                           1134339
+3                            824840
+4                            504614
+5                            268015
+6                            129516
+7                             59516
+8                             27141
+9                             12824
+10                             6229
+11                             3087
+12                             1505
+13                              789
+14                              393
+15                              172
+16                               79
+17                               47
+18                               11
+19                                6
+20                                6
+21                                2
+22                                1
+23                                1
+36                                1
+2018-11-07 14:26:00,354 - INFO - Writing these stats to ./results/codoncounts/BF520-mutDNA-rep2_readsperbc.csv
+
+2018-11-07 14:26:00,358 - INFO - Examining the 6639970 barcodes to build and align subamplicons...
+2018-11-07 14:26:11,213 - INFO - Barcodes examined so far: 200000
+2018-11-07 14:26:21,860 - INFO - Barcodes examined so far: 400000
+2018-11-07 14:26:32,215 - INFO - Barcodes examined so far: 600000
+2018-11-07 14:26:42,594 - INFO - Barcodes examined so far: 800000
+2018-11-07 14:26:53,293 - INFO - Barcodes examined so far: 1000000
+2018-11-07 14:27:03,407 - INFO - Barcodes examined so far: 1200000
+2018-11-07 14:27:13,273 - INFO - Barcodes examined so far: 1400000
+2018-11-07 14:27:22,738 - INFO - Barcodes examined so far: 1600000
+2018-11-07 14:27:32,185 - INFO - Barcodes examined so far: 1800000
+2018-11-07 14:27:48,258 - INFO - Barcodes examined so far: 2000000
+2018-11-07 14:28:03,984 - INFO - Barcodes examined so far: 2200000
+2018-11-07 14:28:18,952 - INFO - Barcodes examined so far: 2400000
+2018-11-07 14:28:27,477 - INFO - Barcodes examined so far: 2600000
+2018-11-07 14:28:35,242 - INFO - Barcodes examined so far: 2800000
+2018-11-07 14:28:42,773 - INFO - Barcodes examined so far: 3000000
+2018-11-07 14:28:49,848 - INFO - Barcodes examined so far: 3200000
+2018-11-07 14:28:56,582 - INFO - Barcodes examined so far: 3400000
+2018-11-07 14:29:02,848 - INFO - Barcodes examined so far: 3600000
+2018-11-07 14:29:08,554 - INFO - Barcodes examined so far: 3800000
+2018-11-07 14:29:13,868 - INFO - Barcodes examined so far: 4000000
+2018-11-07 14:29:19,021 - INFO - Barcodes examined so far: 4200000
+2018-11-07 14:29:23,594 - INFO - Barcodes examined so far: 4400000
+2018-11-07 14:29:27,936 - INFO - Barcodes examined so far: 4600000
+2018-11-07 14:29:31,819 - INFO - Barcodes examined so far: 4800000
+2018-11-07 14:29:35,229 - INFO - Barcodes examined so far: 5000000
+2018-11-07 14:29:38,304 - INFO - Barcodes examined so far: 5200000
+2018-11-07 14:29:41,054 - INFO - Barcodes examined so far: 5400000
+2018-11-07 14:29:43,306 - INFO - Barcodes examined so far: 5600000
+2018-11-07 14:29:45,006 - INFO - Barcodes examined so far: 5800000
+2018-11-07 14:29:46,282 - INFO - Barcodes examined so far: 6000000
+2018-11-07 14:29:47,098 - INFO - Barcodes examined so far: 6200000
+2018-11-07 14:29:47,532 - INFO - Barcodes examined so far: 6400000
+2018-11-07 14:29:58,189 - INFO - Barcodes examined so far: 6600000
+2018-11-07 14:29:58,689 - INFO - Examined all barcodes. Summary stats:
+total  too few reads  not alignable  aligned
+6639970        3666836         792478  2180656
+2018-11-07 14:29:58,689 - INFO - Writing these stats to ./results/codoncounts/BF520-mutDNA-rep2_bcstats.csv
+
+2018-11-07 14:29:58,718 - INFO - Writing the counts of each codon identity at each site to ./results/codoncounts/BF520-mutDNA-rep2_codoncounts.csv
+
+2018-11-07 14:29:58,775 - INFO - Successful completion of dms2_bcsubamp

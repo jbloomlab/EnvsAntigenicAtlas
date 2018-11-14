@@ -1,28 +1,30 @@
-2018-08-31 17:08:21,546 - INFO - Beginning execution of dms2_batch_fracsurvive in directory /fh/fast/bloom_j/computational_notebooks/jbloom/2018/EnvsAntigenicAtlas
+2018-11-13 16:44:03,809 - INFO - Beginning execution of dms2_batch_fracsurvive in directory /fh/fast/bloom_j/computational_notebooks/adingens/2017/EnvsAntigenicAtlas
 
-2018-08-31 17:08:21,546 - INFO - Progress is being logged to ./results/fracsurvive/concavg_wtDNA_ctrl/summary.log
-2018-08-31 17:08:22,450 - INFO - Version information:
-	Time and date: Fri Aug 31 17:08:21 2018
+2018-11-13 16:44:03,809 - INFO - Progress is being logged to ./results/fracsurvive/concavg_wtDNA_ctrl/summary.log
+2018-11-13 16:44:03,842 - INFO - Version information:
+	Time and date: Tue Nov 13 16:44:03 2018
 	Platform: Linux-3.13.0-143-generic-x86_64-with-debian-jessie-sid
 	Python version: 3.6.5 |Anaconda, Inc.| (default, Apr 29 2018, 16:14:56)  [GCC 7.2.0]
-	dms_tools2 version: 2.2.9
+	dms_tools2 version: 2.3.0
 	Bio version: 1.72
-	HTSeq version: 0.10.0
-	pandas version: 0.23.3
-	numpy version: 1.15.0
-	IPython version: 6.4.0
+	HTSeq version: 0.11.0
+	pandas version: 0.23.4
+	numpy version: 1.15.1
+	IPython version: 6.5.0
 	jupyter version: 1.0.0
-	matplotlib version: 2.2.2
-	plotnine version: 0.3.0
-	natsort version: 5.3.3
+	matplotlib version: 3.0.0
+	plotnine version: 0.5.0
+	natsort version: 5.4.1
 	pystan version: 2.16.0.0
 	scipy version: 1.1.0
 	seaborn version: 0.9.0
 	phydmslib version: 2.3.1
 	statsmodels version: 0.9.0
 	rpy2 version: 2.9.1
+	regex version: 2.4.148
+	umi_tools version unknown
 
-2018-08-31 17:08:22,450 - INFO - Parsed the following arguments:
+2018-11-13 16:44:03,842 - INFO - Parsed the following arguments:
 	outdir = ./results/fracsurvive/concavg_wtDNA_ctrl
 	ncpus = -1
 	use_existing = yes
@@ -35,8 +37,8 @@
 	batchfile = ./results/fracsurvive/concavg_wtDNA_ctrl/batch.csv
 	summaryprefix = summary
 
-2018-08-31 17:08:22,450 - INFO - Parsing info from ./results/fracsurvive/concavg_wtDNA_ctrl/batch.csv
-2018-08-31 17:08:22,473 - INFO - Read the following sample information:
+2018-11-13 16:44:03,843 - INFO - Parsing info from ./results/fracsurvive/concavg_wtDNA_ctrl/batch.csv
+2018-11-13 16:44:03,890 - INFO - Read the following sample information:
 group,name,sel,mock,err,mds_names,libfracsurvive
 101074,3ug-rep2b,mut-virus-rep2b-101074-3ug,mut-virus-rep2b,wt-DNA-rep2,101074-3ug-rep2b,0.019201833
 101074,4ug-rep2b,mut-virus-rep2b-101074-4ug,mut-virus-rep2b,wt-DNA-rep2,101074-4ug-rep2b,0.015257328999999997
@@ -74,4 +76,4 @@ VRC34,33ug-rep3,mut-virus-rep3-VRC34-33ug,mut-virus-rep3,wt-DNA-rep3,VRC34-33ug-
 VRC34,33ug-rep1,mut-virus-rep1-VRC34-33ug,mut-virus-rep1,wt-DNA-rep1,VRC34-33ug-rep1,0.063644
 
 
-2018-08-31 17:08:22,501 - INFO - Output summary files already exist and '--use_existing' is 'yes', so exiting with no further action.
+2018-11-13 16:44:03,934 - INFO - Output summary files already exist and '--use_existing' is 'yes', so exiting with no further action.

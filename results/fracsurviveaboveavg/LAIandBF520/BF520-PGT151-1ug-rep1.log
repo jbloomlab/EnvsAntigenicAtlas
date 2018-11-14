@@ -1,0 +1,77 @@
+2018-11-08 14:31:23,889 - INFO - Beginning execution of dms2_fracsurvive in directory /fh/fast/bloom_j/computational_notebooks/adingens/2017/EnvsAntigenicAtlas
+
+2018-11-08 14:31:23,889 - INFO - Progress is being logged to ./results/fracsurviveaboveavg/LAIandBF520/BF520-PGT151-1ug-rep1.log
+2018-11-08 14:31:23,896 - INFO - Version information:
+	Time and date: Thu Nov  8 14:31:23 2018
+	Platform: Linux-3.13.0-143-generic-x86_64-with-debian-jessie-sid
+	Python version: 3.6.5 |Anaconda, Inc.| (default, Apr 29 2018, 16:14:56)  [GCC 7.2.0]
+	dms_tools2 version: 2.3.0
+	Bio version: 1.72
+	HTSeq version: 0.11.0
+	pandas version: 0.23.4
+	numpy version: 1.15.1
+	IPython version: 6.5.0
+	jupyter version: 1.0.0
+	matplotlib version: 3.0.0
+	plotnine version: 0.5.0
+	natsort version: 5.4.1
+	pystan version: 2.16.0.0
+	scipy version: 1.1.0
+	seaborn version: 0.9.0
+	phydmslib version: 2.3.1
+	statsmodels version: 0.9.0
+	rpy2 version: 2.9.1
+	regex version: 2.4.148
+	umi_tools version unknown
+
+2018-11-08 14:31:23,897 - INFO - Parsed the following arguments:
+	outdir = ./results/fracsurviveaboveavg/LAIandBF520
+	ncpus = 18
+	use_existing = yes
+	indir = ./results/renumberedcounts
+	chartype = codon_to_aa
+	aboveavg = yes
+	excludestop = yes
+	pseudocount = 5.0
+	mincount = 0
+	name = BF520-PGT151-1ug-rep1
+	sel = BF520-PGT151-rep1
+	mock = BF520-mock-rep1
+	libfracsurvive = 0.0185
+	err = BF520-wtDNA
+
+2018-11-08 14:31:23,899 - INFO - Reading selected sample counts from BF520-PGT151-rep1
+2018-11-08 14:31:23,923 - INFO - Reading mock-selected sample counts from BF520-mock-rep1
+2018-11-08 14:31:23,932 - INFO - Reading error-control sample counts from BF520-wtDNA
+2018-11-08 14:31:23,939 - INFO - Computing fracsurvive for each mutation...
+2018-11-08 14:31:23,940 - INFO - These are the fracsurvive **above** the library average of 0.0185
+2018-11-08 14:31:27,473 - INFO - Mutations with largest mutfracsurvive:
+site wildtype mutation  mutfracsurvive
+613        S        G            0.23
+612        S        P            0.22
+512        A        N            0.19
+512        A        L            0.19
+469        R        E            0.18
+483        L        W            0.18
+582        A        C            0.17
+487        K        Q            0.17
+613        S        Q            0.16
+484        Y        E            0.16
+
+2018-11-08 14:31:27,474 - INFO - Writing to ./results/fracsurviveaboveavg/LAIandBF520/BF520-PGT151-1ug-rep1_mutfracsurvive.csv
+2018-11-08 14:31:27,515 - INFO - Computing sitefracsurvive...
+2018-11-08 14:31:27,532 - INFO - Sites with largest avgfracsurvive:
+site  avgfracsurvive  maxfracsurvive
+613            0.08            0.23
+512            0.05            0.19
+611            0.03            0.12
+509            0.03            0.09
+492            0.02            0.14
+648            0.02            0.09
+634            0.02            0.08
+491            0.02            0.10
+647            0.02            0.05
+484            0.02            0.16
+
+2018-11-08 14:31:27,532 - INFO - Writing to ./results/fracsurviveaboveavg/LAIandBF520/BF520-PGT151-1ug-rep1_sitefracsurvive.csv
+2018-11-08 14:31:27,540 - INFO - Successful completion of dms2_fracsurvive

@@ -1,0 +1,62 @@
+2018-11-08 16:31:29,411 - INFO - Beginning execution of dms2_logoplot in directory /fh/fast/bloom_j/computational_notebooks/adingens/2017/EnvsAntigenicAtlas
+
+2018-11-08 16:31:29,411 - INFO - Progress is being logged to ./results/fracsurvive/LAIandBF520/LAI_LAI-PGT151-median.log
+2018-11-08 16:31:29,420 - INFO - Version information:
+	Time and date: Thu Nov  8 16:31:29 2018
+	Platform: Linux-3.13.0-143-generic-x86_64-with-debian-jessie-sid
+	Python version: 3.6.5 |Anaconda, Inc.| (default, Apr 29 2018, 16:14:56)  [GCC 7.2.0]
+	dms_tools2 version: 2.3.0
+	Bio version: 1.72
+	HTSeq version: 0.11.0
+	pandas version: 0.23.4
+	numpy version: 1.15.1
+	IPython version: 6.5.0
+	jupyter version: 1.0.0
+	matplotlib version: 3.0.0
+	plotnine version: 0.5.0
+	natsort version: 5.4.1
+	pystan version: 2.16.0.0
+	scipy version: 1.1.0
+	seaborn version: 0.9.0
+	phydmslib version: 2.3.1
+	statsmodels version: 0.9.0
+	rpy2 version: 2.9.1
+	regex version: 2.4.148
+	umi_tools version unknown
+
+2018-11-08 16:31:29,420 - INFO - Parsed the following arguments:
+	outdir = ./results/fracsurvive/LAIandBF520
+	ncpus = -1
+	use_existing = yes
+	prefs = None
+	diffsel = None
+	fracsurvive = ./results/fracsurvive/LAIandBF520/summaryLAI_LAI-PGT151-medianmutfracsurvive.csv
+	diffprefs = None
+	name = LAI_LAI-PGT151-median
+	nperline = 84
+	numberevery = 10
+	excludestop = no
+	stringency = 1
+	restrictdiffsel = all
+	diffselrange = None
+	fracsurvivemax = None
+	sortsites = yes
+	mapmetric = functionalgroup
+	colormap = jet
+	overlay1 = ['./results/fracsurvive/LAIandBF520/summaryLAI_LAI-PGT151-medianmutfracsurvive.csv', 'wildtype', 'wildtype']
+	overlay2 = None
+	overlay3 = None
+	underlay = yes
+	scalebar = ['0.4', 'fraction surviving = 0.4']
+	overlaycolormap = jet
+	letterheight = 1
+	ignore_extracols = no
+	sepline = no
+
+2018-11-08 16:31:29,422 - ERROR - Terminating dms2_logoplot with ERROR.
+Traceback (most recent call last):
+  File "/fh/fast/bloom_j/software/conda/envs/BloomLab/bin/dms2_logoplot", line 105, in main
+    assert dms_tools2.parseargs.checkName(args['name'], 'name')
+  File "/fh/fast/bloom_j/software/conda/envs/BloomLab/lib/python3.6/site-packages/dms_tools2/parseargs.py", line 58, in checkName
+    "{2}".format(nametype, name, ', '.join(illegal_chars)))
+ValueError: name LAI_LAI-PGT151-median contains following illegal characters: _

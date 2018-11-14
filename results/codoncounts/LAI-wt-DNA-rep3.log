@@ -1,0 +1,116 @@
+2018-11-09 10:00:04,767 - INFO - Beginning execution of dms2_bcsubamp in directory /fh/fast/bloom_j/computational_notebooks/adingens/2017/EnvsAntigenicAtlas
+
+2018-11-09 10:00:04,767 - INFO - Progress is being logged to ./results/codoncounts/LAI-wt-DNA-rep3.log
+2018-11-09 10:00:04,775 - INFO - Version information:
+	Time and date: Fri Nov  9 10:00:04 2018
+	Platform: Linux-3.13.0-143-generic-x86_64-with-debian-jessie-sid
+	Python version: 3.6.5 |Anaconda, Inc.| (default, Apr 29 2018, 16:14:56)  [GCC 7.2.0]
+	dms_tools2 version: 2.3.0
+	Bio version: 1.72
+	HTSeq version: 0.11.0
+	pandas version: 0.23.4
+	numpy version: 1.15.1
+	IPython version: 6.5.0
+	jupyter version: 1.0.0
+	matplotlib version: 3.0.0
+	plotnine version: 0.5.0
+	natsort version: 5.4.1
+	pystan version: 2.16.0.0
+	scipy version: 1.1.0
+	seaborn version: 0.9.0
+	phydmslib version: 2.3.1
+	statsmodels version: 0.9.0
+	rpy2 version: 2.9.1
+	regex version: 2.4.148
+	umi_tools version unknown
+
+2018-11-09 10:00:04,775 - INFO - Parsed the following arguments:
+	outdir = ./results/codoncounts
+	ncpus = -1
+	use_existing = no
+	refseq = ./data/LAI_Env.fasta
+	alignspecs = ['90,433,39,39', '421,769,38,35', '765,1116,35,33', '1117,1425,38,35', '1424,1779,35,33', '1780,2127,38,38']
+	bclen = 8
+	fastqdir = ./results/FASTQ_files/
+	R2 = None
+	R1trim = [231]
+	R2trim = [191]
+	bclen2 = None
+	chartype = codon
+	maxmuts = 4
+	minq = 15
+	minreads = 2
+	minfraccall = 0.95
+	minconcur = 0.75
+	sitemask = None
+	purgeread = 0
+	purgebc = 0
+	bcinfo = False
+	name = LAI-wt-DNA-rep3
+	R1 = ['LAI-wt-DNA-rep3_R1.fastq.gz']
+
+2018-11-09 10:00:04,779 - INFO - Removing existing file ./results/codoncounts/LAI-wt-DNA-rep3_codoncounts.csv
+2018-11-09 10:00:04,789 - INFO - Removing existing file ./results/codoncounts/LAI-wt-DNA-rep3_readstats.csv
+2018-11-09 10:00:04,814 - INFO - Removing existing file ./results/codoncounts/LAI-wt-DNA-rep3_readsperbc.csv
+2018-11-09 10:00:04,823 - INFO - Removing existing file ./results/codoncounts/LAI-wt-DNA-rep3_bcstats.csv
+2018-11-09 10:00:04,852 - INFO - Read refseq of 2127 codons from ./data/LAI_Env.fasta
+2018-11-09 10:00:04,853 - INFO - Reads are in these FASTQ pairs:
+	./results/FASTQ_files/LAI-wt-DNA-rep3_R1.fastq.gz and ./results/FASTQ_files/LAI-wt-DNA-rep3_R2.fastq.gz
+
+2018-11-09 10:00:04,853 - INFO - Now parsing read pairs...
+2018-11-09 10:00:22,194 - INFO - Reads parsed so far: 500000
+2018-11-09 10:00:37,178 - INFO - Reads parsed so far: 1000000
+2018-11-09 10:00:52,663 - INFO - Reads parsed so far: 1500000
+2018-11-09 10:01:08,075 - INFO - Reads parsed so far: 2000000
+2018-11-09 10:01:24,247 - INFO - Reads parsed so far: 2500000
+2018-11-09 10:01:40,338 - INFO - Reads parsed so far: 3000000
+2018-11-09 10:01:55,450 - INFO - Reads parsed so far: 3500000
+2018-11-09 10:02:12,527 - INFO - Reads parsed so far: 4000000
+2018-11-09 10:02:26,348 - INFO - Reads parsed so far: 4500000
+2018-11-09 10:02:40,821 - INFO - Reads parsed so far: 5000000
+2018-11-09 10:03:00,057 - INFO - Reads parsed so far: 5500000
+2018-11-09 10:03:12,028 - INFO - Parsed 5895780 reads, found 2714842 unique barcodes.
+2018-11-09 10:03:12,046 - INFO - Summary stats on reads:
+total  fail filter  low Q barcode
+5895780            0         690291
+2018-11-09 10:03:12,046 - INFO - Writing these stats to ./results/codoncounts/LAI-wt-DNA-rep3_readstats.csv
+
+2018-11-09 10:03:13,059 - INFO - Number of reads per barcode:
+                 number of barcodes
+number of reads                    
+1                           1282211
+2                            769319
+3                            399961
+4                            171582
+5                             63152
+6                             20482
+7                              6009
+8                              1571
+9                               435
+10                               95
+11                               19
+12                                6
+2018-11-09 10:03:13,059 - INFO - Writing these stats to ./results/codoncounts/LAI-wt-DNA-rep3_readsperbc.csv
+
+2018-11-09 10:03:13,064 - INFO - Examining the 2714842 barcodes to build and align subamplicons...
+2018-11-09 10:03:24,732 - INFO - Barcodes examined so far: 200000
+2018-11-09 10:03:36,388 - INFO - Barcodes examined so far: 400000
+2018-11-09 10:03:47,932 - INFO - Barcodes examined so far: 600000
+2018-11-09 10:03:59,237 - INFO - Barcodes examined so far: 800000
+2018-11-09 10:04:08,914 - INFO - Barcodes examined so far: 1000000
+2018-11-09 10:04:18,466 - INFO - Barcodes examined so far: 1200000
+2018-11-09 10:04:27,392 - INFO - Barcodes examined so far: 1400000
+2018-11-09 10:04:36,334 - INFO - Barcodes examined so far: 1600000
+2018-11-09 10:04:44,339 - INFO - Barcodes examined so far: 1800000
+2018-11-09 10:04:50,636 - INFO - Barcodes examined so far: 2000000
+2018-11-09 10:04:55,916 - INFO - Barcodes examined so far: 2200000
+2018-11-09 10:05:00,017 - INFO - Barcodes examined so far: 2400000
+2018-11-09 10:05:02,423 - INFO - Barcodes examined so far: 2600000
+2018-11-09 10:05:02,890 - INFO - Examined all barcodes. Summary stats:
+total  too few reads  not alignable  aligned
+2714842        1282211         259646  1172985
+2018-11-09 10:05:02,891 - INFO - Writing these stats to ./results/codoncounts/LAI-wt-DNA-rep3_bcstats.csv
+
+2018-11-09 10:05:02,914 - INFO - Writing the counts of each codon identity at each site to ./results/codoncounts/LAI-wt-DNA-rep3_codoncounts.csv
+
+2018-11-09 10:05:02,967 - INFO - Successful completion of dms2_bcsubamp
