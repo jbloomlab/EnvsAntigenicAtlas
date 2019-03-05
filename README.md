@@ -1,7 +1,7 @@
 # An antigenic atlas of HIV-1 escape from broadly neutralizing antibodies
 ### Adam S. Dingens,  Dana Arenz, Haidyn Weight, Julie Overbaugh, and Jesse D. Bloom
 
-The manuscript accompanying this analysis has been posted to _bioRxiv_ as [An antigenic atlas of HIV-1 escape from broadly neutralizing antibodies](https://www.biorxiv.org/content/early/2018/08/31/406355).
+The manuscript accompanying this analysis has been published in to _Immunity_ as [An antigenic atlas of HIV-1 escape from broadly neutralizing antibodies distinguishes functional and structural epitopes](https://www.cell.com/immunity/fulltext/S1074-7613(18)30565-X).
 
 We performed mutational antigenic profiling of a panel of bnAbs using the BG505.T332N mutant Env libraries, first described and characterized in [Haddox, Dingens et al 2018](https://elifesciences.org/articles/34420). The triplicate mutant libraries examined here correspond to the three BG505 replicates in this paper. Replicates annotated with an additional letter (i.e. "rep 1b") were done on an independent day and have their own mock selected control. 
 
